@@ -1,0 +1,29 @@
+@media (min-width: 1024px) {
+    .section--contact__divdiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.section--contact {
+    background-color: var(--white_color);
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+@media (min-width: 480px) {
+    .section--contact {
+    margin: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section--contact {
+        width: 64rem;
+    }
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

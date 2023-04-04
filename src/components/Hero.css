@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-main {
+    height: 48rem;
+    width: 34.3rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.greetings {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    font-weight: 400;
+    text-align: center;
+}
+.greetings span {
+    font-weight: 700;
+}
+.mb-16 {
+    margin-bottom: 1.6rem;
+}

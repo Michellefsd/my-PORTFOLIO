@@ -1,0 +1,20 @@
+.minicard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    background-color: var(--primary_color--20);
+    border-bottom: 1px solid var(--primary_color--40);
+    padding: .8rem;
+}
+.centered {
+    padding: 1.44rem;
+}
+
+.skill {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    line-height: 2.4rem;
+    color: var(--neutral_color--100);
+}

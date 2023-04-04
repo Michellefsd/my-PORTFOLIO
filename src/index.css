@@ -1,0 +1,57 @@
+:root {
+  /* fuente */
+  --fuente_principal:'Source Sans Pro', 'sans-serif';
+
+  /* colores */
+  --primary_color--100:#BA5320;
+  --primary_color--80:#CA724A;
+  --primary_color--60:#DB9E83;
+  --primary_color--40:#EBCABC;
+  --primary_color--20:#F6E8E2;
+
+  --neutral_color--100:#14221E;
+  --neutral_color--80:#434E4C;
+  --neutral_color--60:#737B79;
+  --neutral_color--40:#A5AAA9;
+  --neutral_color--20:#D6D8D8;
+
+  --white_color: #ffffff;
+  --grey_color:#cccccc;
+
+  --clouds_color: #e4d99a;
+  
+  --bk_color--up:#e2d68e;
+  --bk_color--center:#bfd3ae;
+  --bk_color--down:#123c32;
+
+  /* tamaños */
+
+
+
+
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuente_principal) ;
+    line-height: 1.6;
+}
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
