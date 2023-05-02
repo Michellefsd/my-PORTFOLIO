@@ -25,5 +25,25 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: .2rem;
+}
+label {
+    color: var(--neutral_color--80);
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 1.8rem;
+}
+textarea {
+    background-color: var(--primary_color--20);
+    border: none;
+    resize: none;
+}
+.input {
+    margin-top: 0;
+    padding: .8rem;
+    border: none;
+    background-color: var(--primary_color--20);
+}
+.mt {
+    margin-top: 2.2rem;
 }

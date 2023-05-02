@@ -6,8 +6,8 @@ import WhiteRectangle from './WhiteRectangle';
 function Projects() {
   return (
     <div className='section--projects'>
-      <section className='section--projects--greengreen'>
-        <h2 className='section__title--whitehite'><span className='underlined'></span>Projects</h2>
+      <section className='section--projects--green'>
+        <h2 className='section__title--white'><span className='underlined'></span>Projects</h2>
         <div className='projects--grid'>
           <div className='project__div'>
             <div className='img-container'>

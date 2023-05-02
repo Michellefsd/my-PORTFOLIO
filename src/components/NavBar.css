@@ -1,23 +1,24 @@
 .navbar{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
     background-color: var(--neutral_color--100);
-    padding: 1.2rem;
+    padding: 1.2rem 
 }
 
-h4 {
+.my-name {
     color: var(--white_color);
     display: inline-block;
     font-size: 1.6rem;
     line-height: 2.4rem;
     font-weight: bold;
 }
-h5 {
+h4 span {
     color: var(--primary_color--80);
     display: inline-block;
     font-weight: bold;
     font-size: 1.2rem;
     line-height: 1.6rem;
+    margin-left: .4rem;
 }

@@ -6,7 +6,7 @@ function Hero() {
     <div className='container'>
       <main className='hero-main'>
           <h3 className='greetings'>Hello world!</h3>
-          <h3 className='greetings mb-16'>I am <span>Michelle Rodríguez</span> and I am a Front End Dev</h3>
+          <h3 className='greetings mb-16'>I'm <span>Michelle Rodríguez</span> I'm a Front End Dev</h3>
           <button className='btn--white btn--big'>View Profile</button>
       </main>
     </div>

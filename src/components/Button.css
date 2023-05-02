@@ -1,30 +1,27 @@
 .btn--small {
-    align-items: center;
-    border: none;
+    width: 12rem;
     text-align: center;
-    padding: .4rem 1.6rem;
+    padding: .4rem 16px;
     border-radius: 1.6rem;
     font-size: 1.6rem;
-    line-height: 2.4rem;
     font-weight: bold;
-    max-width: 50%;
 }
 .btn--orange {
     background-color: var(--primary_color--100);
-    color: var(--white_color)
+    color: var(--white_color);
+    border: 2px var(--primary_color--100) solid;
 }
 .btn--orange:hover {
     background-color: var(--white_color);
     color: var(--primary_color--100);
-    border: .2rem var(--primary_color--100) solid;
+    border: 2px var(--primary_color--100) solid;
 }
 .btn--orange:active {
     background-color: var(--primary_color--20);
     color: var(--primary_color--100);
-    border: .2rem var(--primary_color--100) solid;
+    border: 2px var(--primary_color--100) solid;
 }
 .btn--big {
-   
     text-align: center;
     padding: 1.2rem 2.4rem;
     border-radius: 2.4rem;

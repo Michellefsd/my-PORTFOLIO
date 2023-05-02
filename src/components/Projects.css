@@ -3,16 +3,16 @@
         margin: 4.8rem 3.2rem;
     }
 }
-.section--projects--greengreen {
+.section--projects--green{
     background-color: var(--neutral_color--100);
     padding: 1.6rem;
 }
 @media (min-width: 768px) {
-    .section--projects--greengreen {
+    .section--projects--green {
         padding: 3.2rem;
     }
 }
-.section__title--whitehite {
+.section__title--white {
     position: relative;
     margin-bottom: 1.6rem;
     color: var(--white_color);
