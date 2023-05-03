@@ -1,5 +1,5 @@
 @media (min-width: 1024px) {
-    .section--contact__divdiv {
+    .section--contact__div {
         display: flex;
         flex-direction: column;
         justify-content: center;

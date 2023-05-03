@@ -1,11 +1,20 @@
 .btn--small {
-    width: 12rem;
     text-align: center;
     padding: .4rem 16px;
     border-radius: 1.6rem;
     font-size: 1.6rem;
     font-weight: bold;
 }
+.btn--big {
+    text-align: center;
+    padding: 1.2rem 2.4rem;
+    border-radius: 2.4rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 700;;
+    max-width: 16rem;
+}
+
 .btn--orange {
     background-color: var(--primary_color--100);
     color: var(--white_color);
@@ -21,16 +30,7 @@
     color: var(--primary_color--100);
     border: 2px var(--primary_color--100) solid;
 }
-.btn--big {
-    text-align: center;
-    padding: 1.2rem 2.4rem;
-    border-radius: 2.4rem;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    font-weight: 700;;
-    align-items: center;
-   
-}
+
 .btn--white {
     background-color: transparent;
     border: 2px solid var(--neutral_color--100);
