@@ -1,6 +1,6 @@
 import './Alert.css';
 
-function Alert({children, icon, style}) {
+function Alert({children, icon, state}) {
   return (
     <div className="inline">
         <div>{icon}</div>
