@@ -4,6 +4,9 @@
     gap: 1.6rem;
     margin-top: 2.4rem;
 }
+h4 {
+    color: #000;
+}
 
 .section--minicard {
     display: grid;

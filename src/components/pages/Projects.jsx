@@ -1,7 +1,7 @@
 import './Projects.css';
 import React from 'react';
-import img1 from '../img/1project.webp';
-import WhiteRectangle from './WhiteRectangle';
+import img1 from '../../img/1project.webp';
+import WhiteRectangle from '../WhiteRectangle';
 
 function Projects() {
   return (

@@ -1,4 +1,4 @@
-import './Button.css';
+import '../Button.css';
 import './Contact.css';
 import {HiCheckCircle, HiExclamationCircle} from 'react-icons/hi';
 import {GoAlert} from 'react-icons/go';

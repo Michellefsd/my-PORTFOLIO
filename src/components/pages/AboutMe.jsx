@@ -1,9 +1,9 @@
 import './AboutMe.css';
-import img1 from'../img/studies1.jpg';
-import img2 from'../img/studies2.jpg';
-import img3 from'../img/studies3.jpg';
+import img1 from'../../img/studies1.jpg';
+import img2 from'../../img/studies2.jpg';
+import img3 from'../../img/studies3.jpg';
 import React from 'react';
-import image from'../img/cv.jpg';
+import image from'../../img/cv.jpg';
 import Studies from './Studies';
 
 function AboutMe() {

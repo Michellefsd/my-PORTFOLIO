@@ -2,7 +2,11 @@ import './WhiteRectangle.css'
 import './Button.css';
 import React from 'react';
 
+<<<<<<< Updated upstream
 function WhiteRectangle( {projectName, technologies} ) {
+=======
+function WhiteRectangle( { projectName, technologies } ) {
+>>>>>>> Stashed changes
   return (
     <div className='white-rectangle'>
       <div>
