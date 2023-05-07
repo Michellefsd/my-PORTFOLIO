@@ -4,7 +4,7 @@ function Alert({children, icon, state}) {
   return (
     <div className="inline">
         <div>{icon}</div>
-        <div>{children}</div>
+        <div className="children-alert">{children}</div>
     </div>
   );
 }

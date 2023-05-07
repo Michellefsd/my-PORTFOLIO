@@ -1,0 +1,14 @@
+.overflow-hidden {
+    overflow: hidden;
+}
+.fijo {
+    position: fixed;
+    inset: 2rem;
+    background-color: var(--neutral_color--20);
+    /* fixed inset-40 p-10 bg-white */
+}
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
