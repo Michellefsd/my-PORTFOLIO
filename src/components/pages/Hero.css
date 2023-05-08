@@ -32,6 +32,15 @@
     height: 9rem;
     background-color: var(--clouds_color);
     border-radius: 70%;
+    animation: move 20s;
+}
+@keyframes move {
+    0% {
+        transform: translateX(12rem);
+    }
+    100% {
+        transform: translateX(0)
+    }
 }
 
 .cl1 {

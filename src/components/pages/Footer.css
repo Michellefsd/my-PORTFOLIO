@@ -4,6 +4,8 @@ footer {
     align-items: center;
     justify-content: space-around;
     padding: 1rem 0 0;
+    position: relative;
+    z-index: 2;
 }
 footer p, footer span {
     color: var(--white_color);
@@ -17,4 +19,34 @@ footer p, footer span {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+.animation {
+    animation: move 77s;
+}
+@keyframes move {
+    0% {
+        transform: translate3D(0rem, 0rem, 0 );
+        rotate: -5deg;
+    }
+    17% {
+        /* rotate: 5deg; */
+        transform: translate3D(-3rem, -5rem, 0);
+        rotate: 5deg; 
+    }
+    34% { 
+        transform: translate3D(-5rem, 5rem, 0);
+    }
+    50% { 
+        transform: translate3D(0rem, 0rem, 0);
+    }
+    64% {
+        transform: translate3D(5rem, 3rem, 0);
+    }
+    87% {
+        transform: translate3D(-5rem, 5rem, 0);
+    }
+    100% {
+        /* rotate: -5deg; */
+        transform: translate3D(0rem, 0rem, 0 );
+    }
 }
