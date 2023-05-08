@@ -47,10 +47,12 @@ function Contact() {
     <Alert icon={<GoAlert style={{color: 'orange', fontSize: '24px'}}/>}> Enter a valid {nameValue}</Alert>;
 
   const validateFunctions = () => {
-    setNameState(nameValue !== "");
+    setNameState(nameValue.trim() !== "");
     setEmailState(validator.validate(emailValue));
-    // setPhoneState(isValidPhoneNumber(phoneValue));
+    setPhoneState(isValidPhoneNumber(phoneValue));
   }
+ 
+
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -65,10 +67,11 @@ function Contact() {
       setCounter(250);
       setTimeout(() => {
         setShowModal(false);
-      }, 2700);
+      }, 3000);
       setShowModal(true);
     }
   };
+
  
   return (
     <div className='section--contact__div'>

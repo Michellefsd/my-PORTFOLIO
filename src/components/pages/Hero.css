@@ -26,3 +26,35 @@
 .mb-16 {
     margin-bottom: 1.6rem;
 }
+
+.cloud {
+    width: 40rem;
+    height: 9rem;
+    background-color: var(--clouds_color);
+    border-radius: 70%;
+}
+
+.cl1 {
+    position: absolute;
+    top: 44rem;
+    left: -24rem;
+}
+.cl2 {
+    position: absolute;
+    top: 36rem;
+    left: 10rem;
+}
+.cl3 {
+    visibility: hidden;
+    position: absolute;
+    top: 26rem;
+    right: -18rem;
+}
+@media(min-width: 768px) {
+    .cl3 {
+        visibility: visible;
+    }
+}
+.over-cloud {
+    z-index: 1;
+}

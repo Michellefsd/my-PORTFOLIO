@@ -15,8 +15,8 @@ return ReactDOM.createPortal(
         <div>
             <div className="fijo">
                 <div className="modal">
-                    <p>Your message has been received.Thank you for your time!</p>
-                   
+                    <p>Your message has been received.</p><br/>
+                    <p> Thank you for your time!</p>
                 </div>
             </div>
         </div>,

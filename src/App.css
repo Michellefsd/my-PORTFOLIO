@@ -27,20 +27,15 @@ p {
   background: linear-gradient(0deg, rgba(18,60,50,1) 0%, rgba(191,211,174,1) 64%, rgba(226,214,142,1) 100%); 
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0;
   border: 1px solid black;
-  /* flex: none;
-  order: 2;
-  flex-grow: 0;
-  align-self: stretch;
-  z-index: 2; */
+  margin: 0;
+  position: relative;
 }
 @media (min-width: 768px) {
     .bk-main {
       border: none;
     }
 }
-
   @media (min-width: 1024px) {
     .div-skills {
       display: grid;
@@ -73,6 +68,20 @@ p {
     width: 3.2rem;
     height: .4rem;
     bottom: 0px;
+}
+.flex {
+  display: flex;
+}
+@media(min-width: 768px) {
+  .buildings {
+    visibility: visible;
+  }
+  .flex img {
+    max-width: 50%;
+  }
+}
+.hidden {
+  visibility: hidden;
 }
 
 

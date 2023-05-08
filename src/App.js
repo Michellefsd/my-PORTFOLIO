@@ -1,4 +1,5 @@
 import './App.css';
+import img from './img/edificio-1.png'
 import AboutMe from './components/pages/AboutMe';
 import Contact from './components/pages/Contact';
 import Footer from './components/pages/Footer';
@@ -12,16 +13,27 @@ function App() {
   return (
     <div>
       <NavBar />
-      <main className='bk-main'>
-        <Hero />
-        <div className='div-skills'>
-          <AboutMe />
-          <Skills />
-        </div>
-        <Projects />
-        <Contact />
-        <Footer />
-      </main>
+          <main className='bk-main'>
+            <div className='flex'>
+              <img 
+                src={img}
+                alt='edificios dados vuelta, imagen decorativa marco superior'
+              />
+              <img 
+              className='buildings'
+                src={img}
+                alt='edificios dados vuelta, imagen decorativa marco superior'
+              />
+            </div>
+            <Hero />
+            <div className='div-skills'>
+              <AboutMe />
+              <Skills />
+            </div>
+            <Projects />
+            <Contact />
+            <Footer />
+          </main>
     </div>
   );
 }
