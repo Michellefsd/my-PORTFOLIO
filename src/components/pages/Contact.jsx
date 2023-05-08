@@ -1,6 +1,6 @@
 import '../Button.css';
 import './Contact.css';
-import {useState, useEffect} from 'react';
+import {useState } from 'react';
 import { isValidPhoneNumber  } from 'libphonenumber-js';
 import {HiCheckCircle, HiExclamationCircle} from 'react-icons/hi';
 import {GoAlert} from 'react-icons/go';
@@ -35,10 +35,12 @@ function Contact() {
   const handlePhoneChange = (e) => {
     setPhoneValue(e.target.value);
   };
+  
   const handleMessageChange = (e) => { 
     setMessageValue(e.target.value);
     setCounter(250 - messageValue.length);
   };
+
 
   const validInput = 
     <Alert icon={<HiCheckCircle style={{color: 'green', fontSize: '24px'}}/>}> This Looks Good</Alert>;
