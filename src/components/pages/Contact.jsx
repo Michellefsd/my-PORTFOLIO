@@ -7,7 +7,7 @@ import {GoAlert} from 'react-icons/go';
 import Alert from '../Alert';
 import Modal from '../Modal';
 
-function Contact() {
+function Contact({ ref }) {
   const [nameValue, setNameValue] = useState("");
   const [nameState, setNameState] = useState(null);
 
@@ -45,16 +45,26 @@ function Contact() {
   const validInput = 
     <Alert icon={<HiCheckCircle style={{color: 'green', fontSize: '24px'}}/>}> This Looks Good</Alert>;
 
+    let type;
   const nonValidInput = 
-    <Alert icon={<GoAlert style={{color: 'orange', fontSize: '24px'}}/>}> Enter a valid {nameValue}</Alert>;
-
-  const validateFunctions = () => {
+    <Alert icon={<GoAlert style={{color: 'orange', fontSize: '24px'}}/>}> Enter a valid {type}</Alert>;
+  
+  
+ 
+  const validateName = () => {
     setNameState(nameValue.trim() !== "");
+  }
+  const validateEmail = () => {
     setEmailState(validator.validate(emailValue));
+  }
+  const validatePhone = ( )=> {
     setPhoneState(isValidPhoneNumber(phoneValue));
   }
- 
-
+    const validateFunctions = () => {
+    validateName();
+    validateEmail();
+    validatePhone();
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -77,22 +87,21 @@ function Contact() {
  
   return (
     <div className='section--contact__div'>
-      <section className='section--contact'>
+      <section ref={ref} className='section--contact'>
         <h2 className='section--title'><span className='underlined'></span>Contact</h2>
         <form onSubmit={handleSubmit} className='form'>
           <label htmlFor="name">Name</label>
-          <input onChange={handleNameChange || ""} onBlur={validateFunctions} value={nameValue || ""} className='input' id="name" type="text" />
-          {nameState == null || (nameState ? validInput : nonValidInput)}
+          <input onChange={handleNameChange || ""} onBlur={validateName} value={nameValue || ""} className='input' id="name" type="text" />
+          {nameState == null || (nameState ? validInput : nonValidInput && (type = "name"))}
 
           <label htmlFor="mail">Email</label>
-          <input value={emailValue || ""} onChange={handleMailChange || ""} onBlur={validateFunctions} className='input' id="mail" type="email" />
-          {emailState == null || (emailState ? validInput : nonValidInput)}
+          <input value={emailValue || ""} onChange={handleMailChange || ""} onBlur={validateEmail} className='input' id="mail" type="email" />
+          {emailState == null || (emailState ? validInput : nonValidInput && (type = "email"))}
 
           <label htmlFor="phone">Phone</label>
-          <input value={phoneValue || ""} onChange={handlePhoneChange || ""} onBlur={validateFunctions} className='input' id="phone" type="number" />
-          {phoneState == null || (phoneState ? validInput : nonValidInput)}
+          <input value={phoneValue || ""} onChange={handlePhoneChange || ""} onBlur={validatePhone} className='input' id="phone" type="tel" />
+          {phoneState == null || (phoneState ? validInput : nonValidInput && (type="phone number"))}
           
-          {showModal && <Modal />}
 
           <label htmlFor="message">Message</label>
           <textarea onChange={handleMessageChange|| ""} onBlur={validateFunctions} value={messageValue || ""} id="message" cols="30" rows="10"></textarea>
@@ -100,6 +109,8 @@ function Contact() {
           <button className='btn--orange btn--big mt'>Send</button>
         </form>
       </section>
+      {showModal && <Modal />}
+
     </div>
   )
 };

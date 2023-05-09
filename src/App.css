@@ -30,27 +30,28 @@ p {
   border: 1px solid black;
   margin: 0;
   position: relative;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
     .bk-main {
       border: none;
     }
 }
-  @media (min-width: 1024px) {
-    .div-skills {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: space-around;
-      align-items: flex-start;
-    }
+@media (min-width: 1024px) {
+  .div-skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    align-items: flex-start;
   }
-  .section {
-    background-color: var(--white_color);
-    padding: 3rem;
-    margin-bottom: 3rem;
-    /* flex: none;
-    order: 1;
-    flex-grow: 0; */
+}
+.section {
+  background-color: var(--white_color);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  /* flex: none;
+  order: 1;
+  flex-grow: 0; */
 }
 @media (min-width: 480px) {
     .section {

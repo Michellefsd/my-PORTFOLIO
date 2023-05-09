@@ -6,7 +6,7 @@ import React from 'react';
 import image from'../../img/cv.jpg';
 import Studies from './Studies';
 
-function AboutMe() {
+function AboutMe({ ref }) {
   return (
     <div>
       <section className='section'>
@@ -32,6 +32,9 @@ function AboutMe() {
             </div>
             <div>
               <Studies where={"Udemy"} when={"january 2023"} imagen={img3} what={"Web Development"} />
+            </div>
+            <div>
+              <Studies where={"Udemy"} when={"january 2023"} imagen={img2} what={"React"} />
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import './App.css';
+import { useRef } from 'react';
 import img from './img/edificio-1.png'
 import AboutMe from './components/pages/AboutMe';
 import Contact from './components/pages/Contact';
@@ -9,10 +10,20 @@ import Projects from './components/pages/Projects';
 import Skills from './components/pages/Skills';
 
 
+
 function App() {
+  const aboutMeRef = useRef();
+  const contactRef = useRef();
+  const handleClickToContact = () => {
+    contactRef.current?.scrollIntoView({behavior: 'smooth'});
+  };
+  const handleClickToProfile = () => {
+    aboutMeRef.current.scrollIntoView({behavior: 'smooth'});
+  };
+
   return (
     <div>
-      <NavBar />
+      <NavBar handleClick={handleClickToContact}/>
           <main className='bk-main'>
             <div className='flex'>
               <img 
@@ -25,13 +36,13 @@ function App() {
                 alt='edificios dados vuelta, imagen decorativa marco superior'
               />
             </div>
-            <Hero />
+            <Hero handleClick={handleClickToProfile}/>
             <div className='div-skills'>
-              <AboutMe />
+              <AboutMe ref={aboutMeRef}/>
               <Skills />
             </div>
             <Projects />
-            <Contact />
+            <Contact ref={contactRef} />
             <Footer />
           </main>
     </div>
