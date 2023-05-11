@@ -28,5 +28,5 @@
     font-size: 2.4rem;
     color: var(--neutral_color--100);
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }

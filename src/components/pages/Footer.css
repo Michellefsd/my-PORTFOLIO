@@ -22,27 +22,46 @@ footer p, footer span {
 }
 .animation {
     animation: move 77s;
+    position: absolute;
+    z-index: -1;
 }
 @keyframes move {
     0% {
         transform: translate3D(0rem, 0rem, 0 );
         rotate: -5deg;
     }
-    17% {
+    8% {
         /* rotate: 5deg; */
         transform: translate3D(-3rem, -5rem, 0);
         rotate: 5deg; 
     }
-    34% { 
+    16% { 
         transform: translate3D(-5rem, 5rem, 0);
     }
-    50% { 
+    24% { 
         transform: translate3D(0rem, 0rem, 0);
     }
-    64% {
+    32% {
         transform: translate3D(5rem, 3rem, 0);
     }
-    87% {
+    40% {
+        transform: translate3D(-5rem, 5rem, 0);
+    }
+    48% {
+        /* rotate: 5deg; */
+        transform: translate3D(-3rem, -5rem, 0);
+        rotate: 5deg; 
+    }
+    56% { 
+        transform: translate3D(-5rem, 5rem, 0);
+    }
+    64% { 
+        transform: translate3D(0rem, 0rem, 0);
+    }
+    72% {
+        transform: translate3D(5rem, 3rem, 0);
+    }
+    80% {
         transform: translate3D(-5rem, 5rem, 0);
     }
     100% {

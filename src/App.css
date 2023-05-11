@@ -30,6 +30,7 @@ p {
   border: 1px solid black;
   margin: 0;
   position: relative;
+  z-index: 0;
   overflow: hidden;
 }
 @media (min-width: 768px) {

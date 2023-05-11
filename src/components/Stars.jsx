@@ -11,7 +11,8 @@ function Stars({ size, bottom, left }) {
       width: size + "rem", 
       height: size + "rem", 
       backgroundColor: "var(--clouds_color)", 
-      margin: "0"
+      margin: "0",
+      zIndex: "-1",
   }}></div>
   );
 }

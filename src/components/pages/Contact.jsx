@@ -1,13 +1,13 @@
 import '../Button.css';
 import './Contact.css';
-import {useState } from 'react';
+import {useState, useEffect } from 'react';
 import { isValidPhoneNumber  } from 'libphonenumber-js';
 import {HiCheckCircle, HiExclamationCircle} from 'react-icons/hi';
 import {GoAlert} from 'react-icons/go';
 import Alert from '../Alert';
 import Modal from '../Modal';
 
-function Contact({ ref }) {
+function Contact() {
   const [nameValue, setNameValue] = useState("");
   const [nameState, setNameState] = useState(null);
 
@@ -18,13 +18,11 @@ function Contact({ ref }) {
   const [phoneValue, setPhoneValue] = useState("");
   const [phoneState, setPhoneState] = useState(null);
 
-  ///////////////////////////////////////
-  // usar useEffect xa q renderize al momento
+
   const [messageValue, setMessageValue] = useState("");
   const [counter, setCounter] = useState(250);
 
   const [showModal, setShowModal] = useState(false);
-
 
   const handleNameChange = (e) => {
     setNameValue(e.target.value);
@@ -32,22 +30,25 @@ function Contact({ ref }) {
   const handleMailChange = (e) => {
     setEmailValue(e.target.value);
   };
+  const fetchCounter = () => {
+    setCounter(250- messageValue.length)
+  };
   const handlePhoneChange = (e) => {
     setPhoneValue(e.target.value);
   };
-  
   const handleMessageChange = (e) => { 
     setMessageValue(e.target.value);
-    setCounter(250 - messageValue.length);
+    fetchCounter();
   };
-
-
+  
+  useEffect(() => {
+    fetchCounter();
+  }, [fetchCounter])
   const validInput = 
     <Alert icon={<HiCheckCircle style={{color: 'green', fontSize: '24px'}}/>}> This Looks Good</Alert>;
 
-    let type;
   const nonValidInput = 
-    <Alert icon={<GoAlert style={{color: 'orange', fontSize: '24px'}}/>}> Enter a valid {type}</Alert>;
+    <Alert icon={<GoAlert style={{color: 'orange', fontSize: '24px'}}/>}>This is not Valid</Alert>;
   
   
  
@@ -87,20 +88,20 @@ function Contact({ ref }) {
  
   return (
     <div className='section--contact__div'>
-      <section ref={ref} className='section--contact'>
+      <section className='section--contact'>
         <h2 className='section--title'><span className='underlined'></span>Contact</h2>
         <form onSubmit={handleSubmit} className='form'>
           <label htmlFor="name">Name</label>
           <input onChange={handleNameChange || ""} onBlur={validateName} value={nameValue || ""} className='input' id="name" type="text" />
-          {nameState == null || (nameState ? validInput : nonValidInput && (type = "name"))}
+          {nameState == null || (nameState ? validInput : nonValidInput)}
 
           <label htmlFor="mail">Email</label>
           <input value={emailValue || ""} onChange={handleMailChange || ""} onBlur={validateEmail} className='input' id="mail" type="email" />
-          {emailState == null || (emailState ? validInput : nonValidInput && (type = "email"))}
+          {emailState == null || (emailState ? validInput : nonValidInput)}
 
           <label htmlFor="phone">Phone</label>
           <input value={phoneValue || ""} onChange={handlePhoneChange || ""} onBlur={validatePhone} className='input' id="phone" type="tel" />
-          {phoneState == null || (phoneState ? validInput : nonValidInput && (type="phone number"))}
+          {phoneState == null || (phoneState ? validInput : nonValidInput)}
           
 
           <label htmlFor="message">Message</label>

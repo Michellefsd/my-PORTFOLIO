@@ -2,12 +2,12 @@ import './Footer.css';
 import Stars from '../Stars';
 import React from 'react';
 
-function Footer() {
+function Footer({ starsId }) {
   const d = new Date();
   let year = d.getFullYear();
   return (
     <div>
-      <div className="inline animation">
+      <div id='stars' className="inline animation"> 
         <Stars size={.8} bottom={29} left={-42} />
         <Stars size={2} bottom={-4} left={116} />
         <Stars size={1.4} bottom={36} left={5} />
