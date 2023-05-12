@@ -1,13 +1,16 @@
 import './ProjectDetail.css';
 
-function ProjectDetail({ content, href }) {
+function ProjectDetail({ content, href, principal }) {
   return (
-    <div className="project-detail">
+    <div>
+      <div className="project-detail"></div>
         <div className='content'>
+            <p>{principal}</p>
             <p>{content}</p>
             <a href={href}>See Project</a>
         </div>
     </div>
+    
   );
 }
 
