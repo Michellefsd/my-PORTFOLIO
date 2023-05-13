@@ -8,6 +8,7 @@ import Hero from './components/pages/Hero';
 import NavBar from './components/pages/NavBar';
 import Projects from './components/pages/Projects';
 import Skills from './components/pages/Skills';
+import Aeroplane from './components/Aeroplane';
 
 function App() { 
   
@@ -32,6 +33,9 @@ function App() {
                 src={img}
                 alt='edificios dados vuelta, imagen decorativa marco superior'
               />
+            </div>
+            <div className='avion'>
+               <Aeroplane />
             </div>
             <Hero handleClick={handleClickToProfile}/>
             <div className='div-skills'>
