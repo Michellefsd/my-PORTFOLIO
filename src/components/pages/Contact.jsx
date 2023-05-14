@@ -1,13 +1,13 @@
 import '../Button.css';
 import './Contact.css';
-import {useState, useEffect } from 'react';
+import {useState, useEffect, forwardRef } from 'react';
 import { isValidPhoneNumber  } from 'libphonenumber-js';
 import {HiCheckCircle, HiExclamationCircle} from 'react-icons/hi';
 import {GoAlert} from 'react-icons/go';
 import Alert from '../Alert';
 import Modal from '../Modal';
 
-function Contact() {
+const Contact = forwardRef((props, ref) => {
   const [nameValue, setNameValue] = useState("");
   const [nameState, setNameState] = useState(null);
 
@@ -87,7 +87,7 @@ function Contact() {
 
  
   return (
-    <div className='section--contact__div'>
+    <div id="contact" ref={ref} className='section--contact__div'>
       <section className='section--contact'>
         <h2 className='section--title'><span className='underlined'></span>Contact</h2>
         <form onSubmit={handleSubmit} className='form'>
@@ -114,7 +114,7 @@ function Contact() {
 
     </div>
   )
-};
+});
 
 
 export default Contact;

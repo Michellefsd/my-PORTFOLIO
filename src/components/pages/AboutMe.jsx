@@ -2,13 +2,13 @@ import './AboutMe.css';
 import img1 from'../../img/studies1.jpg';
 import img2 from'../../img/studies2.jpg';
 import img3 from'../../img/studies3.jpg';
-import React from 'react';
+import { forwardRef } from 'react';
 import image from'../../img/cv.jpg';
 import Studies from './Studies';
 
-function AboutMe({ ref }) {
+const AboutMe = forwardRef((props, ref ) => {
   return (
-    <div>
+    <div id="aboutMe" ref={ref}>
       <section className='section'>
         <h2 className='section--title'><span className='underlined'></span>About Me</h2>
         <div className='section--presentation'>
@@ -41,6 +41,6 @@ function AboutMe({ ref }) {
       </section>
     </div>
   );
-}
+});
 
 export default AboutMe;

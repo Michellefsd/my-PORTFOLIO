@@ -1,5 +1,5 @@
 import './App.css';
-// import { useRef } from 'react';
+import { useRef } from 'react';
 import img from './img/edificio-1.png'
 import AboutMe from './components/pages/AboutMe';
 import Contact from './components/pages/Contact';
@@ -11,12 +11,14 @@ import Skills from './components/pages/Skills';
 import Aeroplane from './components/Aeroplane';
 
 function App() { 
+  const aboutMeRef = useRef(null);
+  const contactRef = useRef(null);
   
   const handleClickToContact = () => {
-    // contactRef.current?.scrollIntoView({behavior: 'smooth'});
+    contactRef.current.scrollIntoView({behavior: 'smooth'});
   };
   const handleClickToProfile = () => {
-    // aboutMeRef.current.scrollIntoView({behavior: 'smooth'});
+    aboutMeRef.current.scrollIntoView({behavior: 'smooth'});
   };
 
   return (
@@ -39,11 +41,15 @@ function App() {
             </div>
             <Hero handleClick={handleClickToProfile}/>
             <div className='div-skills'>
-              <AboutMe />
+              <div  ref={aboutMeRef}>
+                <AboutMe />
+              </div>
               <Skills />
             </div>
             <Projects />
-            <Contact />
+            <div ref={contactRef}>
+              <Contact />
+            </div>
             <Footer />
           </main>
     </div>
