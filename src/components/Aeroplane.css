@@ -2,4 +2,15 @@
     width: 16rem;
     height: auto;
     display: block;
+    position: absolute;
+    top: 30rem;
+    animation: moving 13s;
+}
+@keyframes moving {
+    0% {
+        transform: translateX(-25rem);
+    }
+    100% {
+        transform: translate3d(180rem, -13rem, 0);
+    }
 }
