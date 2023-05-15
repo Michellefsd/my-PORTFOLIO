@@ -1,4 +1,5 @@
 import './ProjectDetail.css';
+import './Button.css';
 
 function ProjectDetail({ content, href, principal }) {
   return (
@@ -7,7 +8,7 @@ function ProjectDetail({ content, href, principal }) {
         <div className='content'>
             <p>{principal}</p>
             <p>{content}</p>
-            <a href={href}>See Project</a>
+            <a  className='btn--big btn--orange' href={href}>See Project</a>
         </div>
     </div>
     

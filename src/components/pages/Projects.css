@@ -11,6 +11,9 @@
     .section--projects--green {
         padding: 3.2rem;
     }
+    .project__div {
+        margin: 2rem 0;
+    }
 }
 .section__title--white {
     position: relative;
@@ -26,7 +29,7 @@
     height: .4rem;
     bottom: 0px;
 }
-@media (min-width: 768px ) {
+@media (min-width: 1024px ) {
     .projects--grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
