@@ -1,13 +1,15 @@
 import '../Button.css';
 import './Contact.css';
-import {useState, useEffect } from 'react';
+import '../underlined.css';
+import {useState, useEffect, forwardRef } from 'react';
 import { isValidPhoneNumber  } from 'libphonenumber-js';
+
 import {HiCheckCircle, HiExclamationCircle} from 'react-icons/hi';
 import {GoAlert} from 'react-icons/go';
 import Alert from '../Alert';
 import Modal from '../Modal';
 
-function Contact() {
+const Contact = forwardRef((props, ref) => {
   const [nameValue, setNameValue] = useState("");
   const [nameState, setNameState] = useState(null);
 
@@ -22,7 +24,7 @@ function Contact() {
   const [messageValue, setMessageValue] = useState("");
   const [counter, setCounter] = useState(250);
 
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(0);
 
   const handleNameChange = (e) => {
     setNameValue(e.target.value);
@@ -69,7 +71,7 @@ function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (validateFunctions) {
+    if (nameValue !== "" && isValidPhoneNumber(phoneValue) && emailValue !== "" && messageValue !== "") {
       setEmailState(null);
       setPhoneState(null);
       setNameState(null);
@@ -79,15 +81,20 @@ function Contact() {
       setMessageValue("");
       setCounter(250);
       setTimeout(() => {
-        setShowModal(false);
+        setShowModal(0);
       }, 3000);
-      setShowModal(true);
+      setShowModal(1);
+    } else {
+      setTimeout(() => {
+        setShowModal(0);
+      }, 3000);
+      setShowModal(2);
     }
   };
 
  
   return (
-    <div className='section--contact__div'>
+    <div id="contact" ref={ref} className='section--contact__div'>
       <section className='section--contact'>
         <h2 className='section--title'><span className='underlined'></span>Contact</h2>
         <form onSubmit={handleSubmit} className='form'>
@@ -110,11 +117,13 @@ function Contact() {
           <button className='btn--orange btn--big mt'>Send</button>
         </form>
       </section>
-      {showModal && <Modal />}
+      {showModal === 1 && <Modal className="success-modal" p1={"Your message has been received."} p2={" Thank you for your time!"} />}
+      {showModal === 2 && <Modal className="alert-modal" p1={"Something went wrong"} p2={"Do you add all the information?"} />}
+      
 
     </div>
   )
-};
+});
 
 
 export default Contact;

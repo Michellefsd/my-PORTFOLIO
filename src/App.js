@@ -1,6 +1,8 @@
 import './App.css';
-// import { useRef } from 'react';
-import img from './img/edificio-1.png'
+import '../src/components/underlined.css';
+import { useRef } from 'react';
+import img from './img/edificio-1.png';
+import subtitleLineHook from './hooks/subtitleLineHook';
 import AboutMe from './components/pages/AboutMe';
 import Contact from './components/pages/Contact';
 import Footer from './components/pages/Footer';
@@ -11,13 +13,19 @@ import Skills from './components/pages/Skills';
 import Aeroplane from './components/Aeroplane';
 
 function App() { 
+  const aboutMeRef = useRef(null);
+  const contactRef = useRef(null);
   
   const handleClickToContact = () => {
-    // contactRef.current?.scrollIntoView({behavior: 'smooth'});
+    contactRef.current.scrollIntoView({behavior: 'smooth'});
   };
   const handleClickToProfile = () => {
-    // aboutMeRef.current.scrollIntoView({behavior: 'smooth'});
+    aboutMeRef.current.scrollIntoView({behavior: 'smooth'});
   };
+
+  const handleUnderlineAnimation = () => {
+    subtitleLineHook()
+  }
 
   return (
     <div>
@@ -39,11 +47,15 @@ function App() {
             </div>
             <Hero handleClick={handleClickToProfile}/>
             <div className='div-skills'>
-              <AboutMe />
-              <Skills />
+              <div  ref={aboutMeRef}>
+                <AboutMe onMouseOver={handleUnderlineAnimation} />
+              </div>
+              <Skills onMouseOver={handleUnderlineAnimation}/>
             </div>
-            <Projects />
-            <Contact />
+            <Projects onMouseOver={handleUnderlineAnimation}/>
+            <div ref={contactRef}>
+              <Contact onMouseOver={handleUnderlineAnimation}/>
+            </div>
             <Footer />
           </main>
     </div>

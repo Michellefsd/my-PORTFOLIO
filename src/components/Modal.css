@@ -1,12 +1,22 @@
 .overflow-hidden {
     overflow: hidden;
 }
-.fijo {
+.alert-modal {
     position: fixed;
-    inset: 15rem;
+    inset: 15rem 5rem;
     border: var(--primary_color--80) solid 5px;
     border-radius: 20px;
     background-color: var(--primary_color--20);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.success-modal {
+    position: fixed;
+    inset: 15rem 5rem;
+    border: var(--bk_color--down) solid 5px;
+    border-radius: 20px;
+    background-color: rgb(201, 231, 201);
     display: flex;
     justify-content: center;
     align-items: center; 
