@@ -2,7 +2,7 @@ import './Modal.css'
 import ReactDOM from 'react-dom';
 import { useEffect } from 'react';
 
-function Modal() {
+function Modal({ p1, p2, className}) {
     useEffect(()=> {
         document.body.classList.add('overflow-hidden');
         return () => {
@@ -13,10 +13,10 @@ function Modal() {
 // // caso se agregara un hijo directo de html en el documento htmlque sea un 
 return ReactDOM.createPortal(
         <div>
-            <div className="fijo">
+            <div className={className}>
                 <div className="modal">
-                    <p>Your message has been received.</p><br/>
-                    <p> Thank you for your time!</p>
+                    <p>{p1}</p><br/>
+                    <p>{p2}</p>
                 </div>
             </div>
         </div>,

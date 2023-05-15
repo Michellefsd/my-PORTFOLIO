@@ -64,13 +64,7 @@ p {
     position: relative;
     margin-bottom: 1.6rem;
 }
-.underlined {
-    position: absolute;
-    background-color: var(--primary_color--100);
-    width: 3.2rem;
-    height: .4rem;
-    bottom: 0px;
-}
+
 .flex {
   display: flex;
 }
