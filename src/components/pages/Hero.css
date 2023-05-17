@@ -32,9 +32,9 @@
     height: 9rem;
     background-color: var(--clouds_color);
     border-radius: 70%;
-    animation: move 20s;
+    animation: cloud 20s linear;
 }
-@keyframes move {
+@keyframes cloud {
     0% {
         transform: translateX(12rem);
     }

@@ -21,7 +21,7 @@ footer p, footer span {
     justify-content: center;
 }
 .animation {
-    animation: move 77s;
+    animation: move 83s linear infinite;
     position: absolute;
     z-index: -1;
 }
@@ -30,35 +30,19 @@ footer p, footer span {
         transform: translate3D(0rem, 0rem, 0 );
         rotate: -5deg;
     }
-    8% {
+    20%{
         /* rotate: 5deg; */
         transform: translate3D(-3rem, -5rem, 0);
         rotate: 5deg; 
     }
-    16% { 
-        transform: translate3D(-5rem, 5rem, 0);
-    }
-    24% { 
-        transform: translate3D(0rem, 0rem, 0);
-    }
-    32% {
-        transform: translate3D(5rem, 3rem, 0);
-    }
+   
     40% {
-        transform: translate3D(-5rem, 5rem, 0);
-    }
-    48% {
         /* rotate: 5deg; */
         transform: translate3D(-3rem, -5rem, 0);
         rotate: 5deg; 
     }
-    56% { 
-        transform: translate3D(-5rem, 5rem, 0);
-    }
-    64% { 
-        transform: translate3D(0rem, 0rem, 0);
-    }
-    72% {
+
+    60% {
         transform: translate3D(5rem, 3rem, 0);
     }
     80% {
