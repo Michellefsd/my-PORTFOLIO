@@ -2,7 +2,9 @@ import './Skills.css'
 import React from 'react';
 import MiniCard from '../MiniCard';
 import { FaGlobe, FaBookOpen, FaHandHoldingHeart, FaLightbulb } from 'react-icons/fa';
-import { DiHtml5, DiCss3, DiJsBadge, DiGithubBadge, DiDatabase, DiPhp } from 'react-icons/di';
+import { DiHtml5, DiCss3, DiJsBadge, DiGithubBadge } from 'react-icons/di';
+import { SiPhp } from 'react-icons/si';
+import { BsFillDatabaseFill } from 'react-icons/bs';
 
 
 function Skills() {
@@ -26,10 +28,10 @@ function Skills() {
               <MiniCard icon={<DiGithubBadge />}>
                 Git
               </MiniCard>
-              <MiniCard icon={<DiDatabase />}>
-                Sql
+              <MiniCard icon={<BsFillDatabaseFill />}>
+                Databases
               </MiniCard>
-              <MiniCard icon={<DiPhp />}>
+              <MiniCard icon={<SiPhp />}>
                 Php
               </MiniCard>
             </div>
