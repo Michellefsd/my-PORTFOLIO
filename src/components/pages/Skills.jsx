@@ -8,7 +8,7 @@ import { DiHtml5, DiCss3, DiJsBadge, DiGithubBadge, DiDatabase, DiPhp } from 're
 function Skills() {
   return (
     <div>
-      <section  className='section'>
+      <section className='section'>
         <h2  className='section--title'><span className='underlined'></span>Skills</h2>
         <div>
           <div className='section--skills'>

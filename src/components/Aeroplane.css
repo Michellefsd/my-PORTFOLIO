@@ -4,13 +4,22 @@
     display: block;
     position: absolute;
     top: 30rem;
-    animation: moving 13s;
+    animation: moving 13s linear infinite;
 }
 @keyframes moving {
     0% {
-        transform: translateX(-25rem);
+        transform: translate3d(-25rem, 6rem, 0);
     }
+    30% { transform: translate3d(auto, -6rem, 0);}
+    33% {
+        transform: translate3d(35rem, -6rem, 0);
+    }
+    63% { transform: auto, 6rem, 0;}
+    66% {
+        transform: translate3d(85rem, 6rem, 0);
+    }
+    97% { transform: translate3d(auto, -6rem, 0);}
     100% {
-        transform: translate3d(180rem, -13rem, 0);
+        transform: translate3d(135rem, -6rem, 0);
     }
 }

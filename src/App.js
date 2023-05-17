@@ -47,10 +47,12 @@ function App() {
             </div>
             <Hero handleClick={handleClickToProfile}/>
             <div className='div-skills'>
-              <div  ref={aboutMeRef}>
+              <div className='stretch' ref={aboutMeRef}>
                 <AboutMe onMouseOver={handleUnderlineAnimation} />
               </div>
-              <Skills onMouseOver={handleUnderlineAnimation}/>
+              <div className='stretch'>
+                <Skills onMouseOver={handleUnderlineAnimation}/>
+              </div>
             </div>
             <Projects onMouseOver={handleUnderlineAnimation}/>
             <div ref={contactRef}>
