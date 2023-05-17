@@ -8,8 +8,8 @@ import Studies from './Studies';
 
 const AboutMe = forwardRef((props, ref ) => {
   return (
-    <div id="aboutMe" ref={ref}>
-      <section className='section'>
+    <div>
+      <section id="aboutMe" ref={ref} className='section'>
         <h2 className='section--title'><span className='underlined'></span>About Me</h2>
         <div className='section--presentation'>
           <div className='img__div'>
