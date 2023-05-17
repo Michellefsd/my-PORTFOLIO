@@ -1,15 +1,18 @@
 import '../Button.css';
 import './Contact.css';
 import '../underlined.css';
-import {useState, useEffect, forwardRef } from 'react';
+import {useState, useEffect, useRef, forwardRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { isValidPhoneNumber  } from 'libphonenumber-js';
-
 import {HiCheckCircle, HiExclamationCircle} from 'react-icons/hi';
 import {GoAlert} from 'react-icons/go';
 import Alert from '../Alert';
 import Modal from '../Modal';
 
 const Contact = forwardRef((props, ref) => {
+
+  const form = useRef();
+
   const [nameValue, setNameValue] = useState("");
   const [nameState, setNameState] = useState(null);
 
@@ -61,7 +64,9 @@ const Contact = forwardRef((props, ref) => {
     setEmailState(validator.validate(emailValue));
   }
   const validatePhone = ( )=> {
-    setPhoneState(isValidPhoneNumber(phoneValue));
+    // the regex is for local numbers the isValidPhoneNumber() fn is for international numbers
+    const uruguayPhoneRegex = /^(09|2)\d{7}$|^0\d{7}$/;
+    setPhoneState(uruguayPhoneRegex.test(phoneValue) || isValidPhoneNumber(phoneValue));
   }
     const validateFunctions = () => {
     validateName();
@@ -71,7 +76,7 @@ const Contact = forwardRef((props, ref) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (nameValue !== "" && isValidPhoneNumber(phoneValue) && emailValue !== "" && messageValue !== "") {
+    if (validateEmail && validateName && validatePhone && messageValue !== "") {
       setEmailState(null);
       setPhoneState(null);
       setNameState(null);
@@ -80,10 +85,20 @@ const Contact = forwardRef((props, ref) => {
       setPhoneValue("");
       setMessageValue("");
       setCounter(250);
-      setTimeout(() => {
-        setShowModal(0);
-      }, 3000);
-      setShowModal(1);
+      emailjs.sendForm('service_7833pqs', 'template_8bgob4n', form.current, 'BRtHHSHjafSHySB1p')
+      .then((result) => {
+        console.log(result)
+        setTimeout(() => {
+          setShowModal(0);
+        }, 3000);
+        setShowModal(1);
+      }, (error) => {
+          console.log(error.text);
+          setTimeout(() => {
+            setShowModal(0);
+          }, 3000);
+          setShowModal(3);
+      });
     } else {
       setTimeout(() => {
         setShowModal(0);
@@ -97,28 +112,29 @@ const Contact = forwardRef((props, ref) => {
     <div id="contact" ref={ref} className='section--contact__div'>
       <section className='section--contact'>
         <h2 className='section--title'><span className='underlined'></span>Contact</h2>
-        <form onSubmit={handleSubmit} className='form'>
+        <form  ref={form} onSubmit={handleSubmit} className='form'>
           <label htmlFor="name">Name</label>
-          <input onChange={handleNameChange || ""} onBlur={validateName} value={nameValue || ""} className='input' id="name" type="text" />
+          <input onChange={handleNameChange || ""}  name="user_name" onBlur={validateName} value={nameValue || ""} className='input' id="name" type="text" />
           {nameState == null || (nameState ? validInput : nonValidInput)}
 
           <label htmlFor="mail">Email</label>
-          <input value={emailValue || ""} onChange={handleMailChange || ""} onBlur={validateEmail} className='input' id="mail" type="email" />
+          <input value={emailValue || ""} onChange={handleMailChange || ""} name="user_email" onBlur={validateEmail} className='input' id="mail" type="email" />
           {emailState == null || (emailState ? validInput : nonValidInput)}
 
           <label htmlFor="phone">Phone</label>
-          <input value={phoneValue || ""} onChange={handlePhoneChange || ""} onBlur={validatePhone} className='input' id="phone" type="tel" />
+          <input value={phoneValue || ""} onChange={handlePhoneChange || ""} name="user_phone" onBlur={validatePhone} className='input' id="phone" type="tel" />
           {phoneState == null || (phoneState ? validInput : nonValidInput)}
           
 
           <label htmlFor="message">Message</label>
-          <textarea onChange={handleMessageChange|| ""} onBlur={validateFunctions} value={messageValue || ""} id="message" cols="30" rows="10"></textarea>
+          <textarea onChange={handleMessageChange|| ""} name="message" onBlur={validateFunctions} value={messageValue || ""} id="message" cols="30" rows="10"></textarea>
           <Alert icon={<HiExclamationCircle style={{color: 'var(--neutral_color--80)', fontSize: '24px'}}/>}> {counter} characters left</Alert>
           <button className='btn--orange btn--big mt'>Send</button>
         </form>
       </section>
       {showModal === 1 && <Modal className="success-modal" p1={"Your message has been received."} p2={" Thank you for your time!"} />}
       {showModal === 2 && <Modal className="alert-modal" p1={"Something went wrong"} p2={"Do you add all the information?"} />}
+      {showModal === 3 && <Modal className="alert-modal" p1={"Ups! Something went wrong"} p2={"It's us. We are working to fix the problem"} />}
       
 
     </div>
