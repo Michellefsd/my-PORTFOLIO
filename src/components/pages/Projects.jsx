@@ -23,25 +23,25 @@ function Projects() {
         <h2 className='section__title--white'><span className='underlined'></span>Projects</h2>
         <div onMouseLeave={hideDetails} className='projects--grid'>
           <div className='project__div'>
-            {(showDetailProject === 1) && <ProjectDetail principal={'Project that simulates a shop-cart builded with pure JS.'} content={'All the functionality was builded by me and the template was reformulated to improve the design and work better with the needs.'} href={"https://simulador-carrito.netlify.app"} />}    
+            {(showDetailProject === 1) && <ProjectDetail principal={"Carrito de Compras"} content={"JavaScript, CSS, HTML"} />}    
             <div onMouseOver={() => showDetail(1)} className='img-container'>
               <img className="img-fill-container" src={img1} alt="Proyecto simulador de compras online" />
             </div>
             <WhiteRectangle projectName={"Carrito de Compras"} technologies={"JavaScript, CSS, HTML"} />
           </div>
           <div className='project__div'>
-            {(showDetailProject === 2) && <ProjectDetail principal={'My first project with React'} content={'Getting Practice with Apis and at same time my first aproach to React library'} href={'https://rick-y-morty-characters.netlify.app/'} />}    
+            {(showDetailProject === 2) && <ProjectDetail principal={"Rick y Morty"} content={"React"} />}    
             <div onMouseOver={() => showDetail(2)} className='img-container'>
               <img className="img-fill-container" src={img2} alt="Rick and Morty page" />
             </div>
             <WhiteRectangle projectName={"Rick y Morty"} technologies={"React"} />
           </div>
           <div className='project__div'>
-            {(showDetailProject === 3) && <ProjectDetail principal={'My very first project just with html and css'} content={'This is a real Project, it was builded to spread schedule of Shows of 2022 of the Music and humor compoany: Tocata & Fuga'} href={'https://tocata-y-fuga.netlify.app/'} />}    
+            {(showDetailProject === 3) && <ProjectDetail principal={"Tocata & Fuga"} content={"HTML, CSS"} />}    
             <div onMouseOver={() => showDetail(3)} className='img-container'>
               <img className="img-fill-container" src={img3} alt="Tocata and Fuga: Music and Humor Company" />
             </div>
-            <WhiteRectangle projectName={"Tocata & Fuga"} technologies={"html and css"} />
+            <WhiteRectangle projectName={"Tocata & Fuga"} technologies={"HTML, CSS"} />
           </div>
           <div className='project__div'></div>
         </div>

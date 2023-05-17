@@ -5,16 +5,17 @@
 .content {
     display: none;
 }
-@media(min-width: 768px) {
+@media(min-width: 1024px) {
     .project-detail {
-        background-color: var(--neutral_color--20);
+        background-color: white;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height:100%;
+        display: flex;
         transition-duration: 200ms;
-        opacity: .5;
+        opacity: 1;
     }
     .content {
         position: absolute;
@@ -27,19 +28,16 @@
         justify-content: center;
         align-items: center;
     }
-    .content p {
-        text-align: center;
-        margin: 4rem 3rem 0;
-        font-size: 2.4rem;
+    h4 {
+        color: var(--neutral_color--100);
         font-weight: bold;
+        font-size: 2.4rem;
+        margin: .4rem auto;
     }
-    .content a {
-        text-decoration: none;
-        text-align: center;
-        margin-top: 4rem;
+    p {
+        color: var(--neutral_color--100);
+        font-weight: 400;
+        font-size: 1.6rem;
+        margin: 0 auto 2.4rem;
     }
-    a:hover {
-        color: var(--primary_color--100);
-        background-color: white;
-    }   
 }
