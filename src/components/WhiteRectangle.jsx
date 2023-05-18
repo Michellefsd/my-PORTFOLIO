@@ -1,17 +1,18 @@
 import './WhiteRectangle.css'
-import './Button.css';
+import Link from './Link';
 import React from 'react';
 
-function WhiteRectangle( { projectName, technologies } ) {
+function WhiteRectangle( { to, projectName, technologies } ) {
   return (
     <div className='white-rectangle'>
       <div>
         <h4>{projectName}</h4>
         <p>{technologies}</p>
       </div>
-        <button className='btn--white btn--small' href="https://simulador-carrito.netlify.app" target="_blank" >View</button>
+      <Link to={to}>See Project</Link>
+        {/* <button className='btn--white btn--small' href="https://simulador-carrito.netlify.app" target="_blank" >View</button> */}
     </div>
-  )
-}
+  );
+};
 
-export default WhiteRectangle
+export default WhiteRectangle;

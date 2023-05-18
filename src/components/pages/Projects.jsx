@@ -23,25 +23,25 @@ function Projects() {
         <h2 className='section__title--white'><span className='underlined'></span>Projects</h2>
         <div onMouseLeave={hideDetails} className='projects--grid'>
           <div className='project__div'>
-            {(showDetailProject === 1) && <ProjectDetail principal={"Carrito de Compras"} content={"JavaScript, CSS, HTML"} />}    
+            {(showDetailProject === 1) && <ProjectDetail principal={"Carrito de Compras"} content={"JavaScript, CSS, HTML"} to="/project-1" />}    
             <div onMouseOver={() => showDetail(1)} className='img-container'>
               <img className="img-fill-container" src={img1} alt="Proyecto simulador de compras online" />
             </div>
-            <WhiteRectangle projectName={"Carrito de Compras"} technologies={"JavaScript, CSS, HTML"} />
+            <WhiteRectangle projectName={"Carrito de Compras"} technologies={"JavaScript, CSS, HTML"} to="/project-1" />
           </div>
           <div className='project__div'>
-            {(showDetailProject === 2) && <ProjectDetail principal={"Rick y Morty"} content={"React"} />}    
+            {(showDetailProject === 2) && <ProjectDetail principal={"Rick y Morty"} content={"React"} to="/project-2" />}    
             <div onMouseOver={() => showDetail(2)} className='img-container'>
               <img className="img-fill-container" src={img2} alt="Rick and Morty page" />
             </div>
-            <WhiteRectangle projectName={"Rick y Morty"} technologies={"React"} />
+            <WhiteRectangle projectName={"Rick y Morty"} technologies={"React"} to="/project-2" />
           </div>
           <div className='project__div'>
-            {(showDetailProject === 3) && <ProjectDetail principal={"Tocata & Fuga"} content={"HTML, CSS"} />}    
+            {(showDetailProject === 3) && <ProjectDetail principal={"Tocata & Fuga"} content={"HTML, CSS"} to="/project-3" />}    
             <div onMouseOver={() => showDetail(3)} className='img-container'>
               <img className="img-fill-container" src={img3} alt="Tocata and Fuga: Music and Humor Company" />
             </div>
-            <WhiteRectangle projectName={"Tocata & Fuga"} technologies={"HTML, CSS"} />
+            <WhiteRectangle projectName={"Tocata & Fuga"} technologies={"HTML, CSS"} to="/project-3" />
           </div>
           <div className='project__div'></div>
         </div>
