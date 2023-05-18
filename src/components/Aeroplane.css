@@ -4,42 +4,44 @@
     display: block;
     position: absolute;
     top: 25rem;
-    animation: moving 20s linear infinite;
+    animation: moving 23s linear infinite;
+    overflow: hidden;
 }
 .mini-aeroplane-div {
+    overflow: hidden;
     width: 5rem;
     height: auto;
     display: block;
     position: absolute;
     top: 22rem;
-    animation: movingback 20s linear infinite;
+    animation: movingback 23s linear infinite;
 }
 @keyframes movingback {
     0% {
-        transform: translate3d(65rem, 3rem, 0);
+        transform: translate3d(85rem, 3rem, 0);
     }
     40% {
-        transform: translate3d(65rem, 3rem, 0);
+        transform: translate3d(79rem, 3rem, 0);
     }
     50% { transform: auto, -3rem, 0;}
     52% {
-        transform: translate3d(49rem, -3rem, 0);
+        transform: translate3d(54rem, -3rem, 0);
     }
     62% { transform: translate3d(auto, 3rem, 0);}
     64% {
-        transform: translate3d(33rem, 3rem, 0);
+        transform: translate3d(38rem, 3rem, 0);
     }
     74% { transform: auto, -3rem, 0;}
     76% {
-        transform: translate3d(17rem, -3rem, 0);
+        transform: translate3d(22rem, -3rem, 0);
     }
     86% { transform: translate3d(auto, 3rem, 0);}
     88% {
-        transform: translate3d(1rem, 3rem, 0);
+        transform: translate3d(6rem, 3rem, 0);
     }
     98% { transform: translate3d(auto, -3rem, 0);}
     100% {
-        transform: translate3d(-15rem, -3rem, 0);
+        transform: translate3d(-25rem, -3rem, 0);
     }
 }
 @keyframes moving {
@@ -48,17 +50,55 @@
     }
     9% { transform: translate3d(auto, -6rem, 0);}
     13% {
-        transform: translate3d(5rem, -6rem, 0);
+        transform: translate3d(10rem, -6rem, 0);
     }
     21% { transform: auto, 6rem, 0;}
     26% {
-        transform: translate3d(35rem, 6rem, 0);
+        transform: translate3d(40rem, 6rem, 0);
     }
     36% { transform: translate3d(auto, -6rem, 0);}
     40% {
-        transform: translate3d(65rem, -6rem, 0);
+        transform: translate3d(70rem, -6rem, 0);
     }
     100% {
-        transform: translate3d(65rem, -6rem, 0);
+        transform: translate3d(85rem, -6rem, 0);
+    }
+}
+@media (min-width: 768px) {
+    .mini-aeroplane-div {
+        display: none;
+    }
+    @keyframes moving {
+        0% {
+            transform: translate3d(-25rem, 6rem, 0);
+        }
+        9% { transform: translate3d(auto, -6rem, 0);}
+        13% {
+            transform: translate3d(10rem, -6rem, 0);
+        }
+        21% { transform: auto, 6rem, 0;}
+        26% {
+            transform: translate3d(40rem, 6rem, 0);
+        }
+        36% { transform: translate3d(auto, -6rem, 0);}
+        40% {
+            transform: translate3d(70rem, -6rem, 0);
+        }
+        49% { transform: translate3d(auto, -6rem, 0);}
+        52% {
+            transform: translate3d(100rem, -6rem, 0);
+        }
+        61% { transform: auto, 6rem, 0;}
+        66% {
+            transform: translate3d(130rem, 6rem, 0);
+        }
+        76% { transform: translate3d(auto, -6rem, 0);}
+        80% {
+            transform: translate3d(160rem, -6rem, 0);
+        }
+        94% { transform: translate3d(auto, -6rem, 0);}
+        100% {
+            transform: translate3d(185rem, -6rem, 0);
+        }
     }
 }
