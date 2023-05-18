@@ -81,7 +81,7 @@ p {
 .hidden {
   visibility: hidden;
 }
-
-.stretch {
+.stretch { 
+  position: relative;
   align-self: stretch;
 }
