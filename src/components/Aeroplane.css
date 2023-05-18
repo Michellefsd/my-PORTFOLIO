@@ -3,23 +3,62 @@
     height: auto;
     display: block;
     position: absolute;
-    top: 30rem;
-    animation: moving 13s linear infinite;
+    top: 25rem;
+    animation: moving 20s linear infinite;
+}
+.mini-aeroplane-div {
+    width: 5rem;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 22rem;
+    animation: movingback 20s linear infinite;
+}
+@keyframes movingback {
+    0% {
+        transform: translate3d(65rem, 3rem, 0);
+    }
+    40% {
+        transform: translate3d(65rem, 3rem, 0);
+    }
+    50% { transform: auto, -3rem, 0;}
+    52% {
+        transform: translate3d(49rem, -3rem, 0);
+    }
+    62% { transform: translate3d(auto, 3rem, 0);}
+    64% {
+        transform: translate3d(33rem, 3rem, 0);
+    }
+    74% { transform: auto, -3rem, 0;}
+    76% {
+        transform: translate3d(17rem, -3rem, 0);
+    }
+    86% { transform: translate3d(auto, 3rem, 0);}
+    88% {
+        transform: translate3d(1rem, 3rem, 0);
+    }
+    98% { transform: translate3d(auto, -3rem, 0);}
+    100% {
+        transform: translate3d(-15rem, -3rem, 0);
+    }
 }
 @keyframes moving {
     0% {
         transform: translate3d(-25rem, 6rem, 0);
     }
-    30% { transform: translate3d(auto, -6rem, 0);}
-    33% {
-        transform: translate3d(35rem, -6rem, 0);
+    9% { transform: translate3d(auto, -6rem, 0);}
+    13% {
+        transform: translate3d(5rem, -6rem, 0);
     }
-    63% { transform: auto, 6rem, 0;}
-    66% {
-        transform: translate3d(85rem, 6rem, 0);
+    21% { transform: auto, 6rem, 0;}
+    26% {
+        transform: translate3d(35rem, 6rem, 0);
     }
-    97% { transform: translate3d(auto, -6rem, 0);}
+    36% { transform: translate3d(auto, -6rem, 0);}
+    40% {
+        transform: translate3d(65rem, -6rem, 0);
+    }
     100% {
-        transform: translate3d(135rem, -6rem, 0);
+        transform: translate3d(65rem, -6rem, 0);
     }
 }
