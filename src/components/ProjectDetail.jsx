@@ -1,14 +1,14 @@
 import './ProjectDetail.css';
-import './Button.css';
+import Link from './Link';
 
-function ProjectDetail({ content, principal }) {
+function ProjectDetail({ to, content, principal }) {
   return (
     <div>
       <div className="project-detail"></div>
         <div className='content'>
             <h4>{principal}</h4>
             <p>{content}</p>
-            <button className='btn--big btn--white'>See Project</button>
+            <Link to={to}>See Project</Link>
         </div>
     </div>
     
