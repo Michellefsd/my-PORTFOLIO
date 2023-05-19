@@ -1,6 +1,7 @@
 import './ProjectDetail.css';
 import Link from './Link';
 
+
 function ProjectDetail({ to, content, principal }) {
   return (
     <div>

@@ -1,6 +1,6 @@
 import './WhiteRectangle.css'
 import Link from './Link';
-import React from 'react';
+
 
 function WhiteRectangle( { to, projectName, technologies } ) {
   return (

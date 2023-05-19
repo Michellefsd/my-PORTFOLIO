@@ -11,6 +11,8 @@ import NavBar from './components/pages/NavBar';
 import Projects from './components/pages/Projects';
 import Skills from './components/pages/Skills';
 import Aeroplane from './components/Aeroplane';
+import Route from './components/Route';
+import ProjectPage from './components/pages/ProjectPage';
 
 function App() { 
   const aboutMeRef = useRef(null);
@@ -29,7 +31,17 @@ function App() {
 
   return (
     <div>
-      <NavBar handleClick={handleClickToContact}/>
+        <Route path="/project1">
+          <ProjectPage title={"tarara"} img={img} resume={"bla bla bla"} />
+        </Route>
+        <Route path="/project2">
+          <ProjectPage title={"tarara"} img={img} resume={"bla bla bla"} />
+        </Route>
+        <Route path="/project3">
+          <ProjectPage title={"tarara"} img={img} resume={"bla bla bla"} />
+        </Route>
+        <Route path="/">  
+          <NavBar handleClick={handleClickToContact}/>
           <main className='bk-main'>
             <div className='flex'>
               <img 
@@ -54,12 +66,14 @@ function App() {
                 <Skills onMouseOver={handleUnderlineAnimation}/>
               </div>
             </div>
+
             <Projects onMouseOver={handleUnderlineAnimation}/>
             <div ref={contactRef}>
               <Contact onMouseOver={handleUnderlineAnimation}/>
             </div>
             <Footer />
           </main>
+        </Route>
     </div>
   );
 }
