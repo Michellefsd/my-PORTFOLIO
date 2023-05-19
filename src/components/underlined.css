@@ -5,11 +5,10 @@
     height: .4rem;
     bottom: 0px;
 }
-.animation-underlined {
-    position: absolute;
-    background-color: var(--primary_color--100);
-    width: 3.2rem;
-    height: .4rem;
-    bottom: 0px;
-    transition: width 200% 1.67s
-}
+/* .underlined:hover {
+    transition: width 2s cubic-bezier(0.4, 0, 0.2, 1); /* Customize the transition duration and cubic-bezier values */
+    /* width: 15%; */
+/*} */
+
+
+

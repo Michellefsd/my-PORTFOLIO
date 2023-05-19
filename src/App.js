@@ -1,7 +1,6 @@
 import './App.css';
 import '../src/components/underlined.css';
 import { useRef } from 'react';
-import img from './img/edificio-1.png';
 import subtitleLineHook from './hooks/subtitleLineHook';
 import AboutMe from './components/pages/AboutMe';
 import Contact from './components/pages/Contact';
@@ -10,7 +9,7 @@ import Hero from './components/pages/Hero';
 import NavBar from './components/pages/NavBar';
 import Projects from './components/pages/Projects';
 import Skills from './components/pages/Skills';
-import Aeroplane from './components/Aeroplane';
+import AnimationSky from './components/AnimationSky';
 import Route from './components/Route';
 import ProjectPage from './components/pages/ProjectPage';
 
@@ -43,20 +42,7 @@ function App() {
         <Route path="/">  
           <NavBar handleClick={handleClickToContact}/>
           <main className='bk-main'>
-            <div className='flex'>
-              <img 
-                src={img}
-                alt='edificios dados vuelta, imagen decorativa marco superior'
-              />
-              <img 
-              className='buildings'
-                src={img}
-                alt='edificios dados vuelta, imagen decorativa marco superior'
-              />
-            </div>
-            <div className='avion'>
-               <Aeroplane />
-            </div>
+            <AnimationSky />
             <Hero handleClick={handleClickToProfile}/>
             <div className='div-skills'>
               <div className='stretch' ref={aboutMeRef}>
