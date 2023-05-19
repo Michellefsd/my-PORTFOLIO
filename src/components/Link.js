@@ -9,7 +9,7 @@ function Link({ to, children}) {
         navigate(to);
     }
   return (
-    <button className='btn--big btn--white'>{children}</button>
+    <button onClick={handleClick} className='btn--big btn--white'>{children}</button>
   );
 }
 

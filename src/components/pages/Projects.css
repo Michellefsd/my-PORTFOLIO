@@ -56,3 +56,8 @@
 .img-container {
     padding: .8rem
 }
+@media (max-width: 480px) {
+    .section--projects {
+        margin-bottom: 3.2rem;
+    }
+}
