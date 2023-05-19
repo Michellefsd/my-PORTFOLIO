@@ -52,3 +52,8 @@ textarea {
 .mt {
     margin-top: 2.2rem;
 }
+@media (max-width: 480px) {
+    #contact {
+        margin-bottom: 3.2rem;
+    }
+}

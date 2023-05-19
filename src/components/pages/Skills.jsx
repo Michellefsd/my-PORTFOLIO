@@ -10,7 +10,7 @@ import { BsFillDatabaseFill } from 'react-icons/bs';
 function Skills() {
   return (
     <div>
-      <section className='section'>
+      <section id="skills" className='section'>
         <h2  className='section--title'><span className='underlined'></span>Skills</h2>
         <div>
           <div className='section--skills'>
