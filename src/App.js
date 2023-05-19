@@ -31,6 +31,19 @@ function App() {
 
   return (
     <div>
+      <NavBar handleClick={handleClickToContact}/>
+      <main className='bk-main'>
+        <div className='flex'>
+          <img 
+            src={img}
+            alt='edificios dados vuelta, imagen decorativa marco superior'
+          />
+          <img 
+            className='buildings'
+            src={img}
+            alt='edificios dados vuelta, imagen decorativa marco superior'
+          />
+          </div>
         <Route path="/project1">
           <ProjectPage title={"tarara"} img={img} resume={"bla bla bla"} />
         </Route>
@@ -41,40 +54,29 @@ function App() {
           <ProjectPage title={"tarara"} img={img} resume={"bla bla bla"} />
         </Route>
         <Route path="/">  
-          <NavBar handleClick={handleClickToContact}/>
-          <main className='bk-main'>
-            <div className='flex'>
-              <img 
-                src={img}
-                alt='edificios dados vuelta, imagen decorativa marco superior'
-              />
-              <img 
-              className='buildings'
-                src={img}
-                alt='edificios dados vuelta, imagen decorativa marco superior'
-              />
+          <div className='avion'>
+             <Aeroplane />
+          </div>
+          <Hero handleClick={handleClickToProfile}/>
+          <div className='div-skills'>
+            <div className='stretch' ref={aboutMeRef}>
+              <AboutMe onMouseOver={handleUnderlineAnimation} />
             </div>
-            <div className='avion'>
-               <Aeroplane />
+            <div className='stretch'>
+              <Skills onMouseOver={handleUnderlineAnimation}/>
             </div>
-            <Hero handleClick={handleClickToProfile}/>
-            <div className='div-skills'>
-              <div className='stretch' ref={aboutMeRef}>
-                <AboutMe onMouseOver={handleUnderlineAnimation} />
-              </div>
-              <div className='stretch'>
-                <Skills onMouseOver={handleUnderlineAnimation}/>
-              </div>
-            </div>
+          </div>
 
-            <Projects onMouseOver={handleUnderlineAnimation}/>
-            <div ref={contactRef}>
-              <Contact onMouseOver={handleUnderlineAnimation}/>
-            </div>
-            <Footer />
-          </main>
-        </Route>
+          <Projects onMouseOver={handleUnderlineAnimation}/>
+          <div ref={contactRef}>
+            <Contact onMouseOver={handleUnderlineAnimation}/>
+          </div>
+          </Route>
+        
+        <Footer />
+      </main>
     </div>
   );
 }
 export default App;
+
