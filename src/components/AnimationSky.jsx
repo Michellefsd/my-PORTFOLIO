@@ -1,5 +1,4 @@
 import img from '../img/edificio-1.png';
-import Aeroplane from './Aeroplane';
 
 function AnimationSky() {
   return (
@@ -14,9 +13,6 @@ function AnimationSky() {
                 src={img}
                 alt='edificios dados vuelta, imagen decorativa marco superior'
             />
-        </div>
-        <div className='avion'>
-            <Aeroplane />
         </div>
     </div>
   );
