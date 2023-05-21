@@ -1,5 +1,4 @@
 import './Projects.css';
-import '../underlined.css';
 import { useState } from 'react';
 import img1 from '../../img/1project.webp';
 import img2 from '../../img/rickmorty.webp';

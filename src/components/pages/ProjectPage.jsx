@@ -1,12 +1,21 @@
+import './ProjectPage.css';
+import '../Button.css';
+import Team from '../Team';
 
-
-function ProjectPage({ title, img, resume }) {
+function ProjectPage({ title, img, resume, href, collaborators }) {
   return (
-    <div>
-     
-        <h2>{title}</h2>
+    <div className="project-card">
+      <button className="btn--small btn--orange">Back</button>
+      <h2 className='padd section--title'><span className='underlined'></span>{title}</h2>
+      <div className='padd'>
         <img src={img} alt={title} />
-        <p>{resume}</p>
+      </div>
+      <p className='padd'>{resume}</p>
+      <a href={href} className="padd btn--big btn--white">Visit The Site</a>
+      <h3 className='padd'>Team</h3>
+      <Team collaborators={collaborators} />
+      <Team collaborators={collaborators} /> 
+      <h3>Technologies</h3>
     </div>
   )
 }

@@ -15,21 +15,21 @@
 @media (min-width: 768px) {
     .section--presentation {
         display: grid;
-        grid-template-columns: 35% 65%;   
+        grid-template-columns: 33% 67%;   
         justify-content: center;
     }
 }
 @media (min-width: 1000px) {
     .section--presentation {
         display: grid;
-        grid-template-columns: 42% 38%;   
+        grid-template-columns: 44% 36%;   
         justify-content: center;
     }
 }
 .img__div {
     display: block;
     width: 16rem;
-    height: 16rem;
+    height: auto;
 }
 .img {
     width: 100%;

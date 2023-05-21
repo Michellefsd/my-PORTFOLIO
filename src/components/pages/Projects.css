@@ -22,13 +22,7 @@
     display: inline-block;
     margin-bottom: 2.4rem;
 }
-.underlined {
-    position: absolute;
-    background-color: var(--primary_color--100);
-    width: 3.2rem;
-    height: .4rem;
-    bottom: 0px;
-}
+
 @media (min-width: 768px ) {
     .projects--grid {
         display: grid;
