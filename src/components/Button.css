@@ -48,3 +48,6 @@
     border: 2px solid var(--neutral_color--100);
 
 }
+.btn--back {
+    max-width: 8rem;
+}

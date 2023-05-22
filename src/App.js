@@ -31,7 +31,6 @@ function App() {
     <div>
       <NavBar handleClick={handleClickToContact}/>
       <main className='bk-main'>
-        <AnimationSky />
         <Route path="/project-1">
           <ProjectPage 
             title={"Recreation of an e-shop cart"} 
@@ -39,7 +38,7 @@ function App() {
             resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music humor Company: Tocata & Fuga"} 
             href={"https://tocata-y-fuga.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Development", img: {img}}]}
-            list={["React", "CSS", "Javascript", "Node", "npm", "Github", "Figma", "Responsive Design", "Collaborative Creation", "Clean Code", "Research"]}
+            list={["React", "CSS", "Javascript", "Node", "npm", "Github", "Figma", "Clean Code", "Research", "Responsive Design", "Collaborative Creation"]}
           />
         </Route>
         <Route path="/project-2">
@@ -72,6 +71,7 @@ function App() {
           />
         </Route>
         <Route path="/"> 
+          <AnimationSky />
           <div className='avion'>
               <Aeroplane />
           </div> 

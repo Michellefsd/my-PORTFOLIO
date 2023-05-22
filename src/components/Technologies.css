@@ -1,0 +1,25 @@
+
+.ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .6rem;
+    list-style: none;
+    align-items: center;
+    margin-left:-4rem;
+}
+
+@media (min-width: 768px) {
+    .extras {
+        display: flex;
+        flex-direction: row;
+        gap: 2.4rem;
+    }
+}
+.technologies {
+    font-size: 1.6rem;
+    color: var(--neutral_color--100);
+    padding: .8rem;
+    background-color: var(--primary_color--20);
+    border-bottom: 1px var(--primary_color--40) solid;
+    text-align: center;
+}

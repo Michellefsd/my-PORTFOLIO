@@ -1,11 +1,12 @@
+import './Technologies.css';
 
 function Technologies({ list }) {
     const renderedList = list.map(item => {
-        return <li className="margin-right">{item}</li>
+        return <li className="technologies">{item}</li>
     })
   return (
     <div>
-        <ul className="inline">
+        <ul className="ul">
             {renderedList}
         </ul>
     </div>

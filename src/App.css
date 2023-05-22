@@ -95,7 +95,13 @@ p {
 .inline {
   display: inline-block;
 }
-.margin-right {
-  margin-right: 1.6rem;
-}
 
+.bold {
+  display: inline;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.block {
+  display: block;
+  font-size: 1.6rem;
+}
