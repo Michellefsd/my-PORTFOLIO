@@ -15,7 +15,6 @@ import img from './img/cv.jpg';
 import img3 from './img/tocatayfuga.webp';
 import img2 from './img/rickmorty.webp';
 import img1 from './img/1project.webp';
-// import subtitleLineHook from './hooks/subtitleLineHook';
 
 function App() { 
   const aboutMeRef = useRef(null);
@@ -28,10 +27,6 @@ function App() {
     aboutMeRef.current.scrollIntoView({behavior: 'smooth'});
   };
 
-  // const handleUnderlineAnimation = () => {
-  //   subtitleLineHook()
-  // }
-
   return (
     <div>
       <NavBar handleClick={handleClickToContact}/>
@@ -39,12 +34,12 @@ function App() {
         <AnimationSky />
         <Route path="/project-1">
           <ProjectPage 
-            title={"Recreation of e-shop cart"} 
+            title={"Recreation of an e-shop cart"} 
             img={img1} 
-            resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music humor Company: Tocata & Fuga"}
+            resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music humor Company: Tocata & Fuga"} 
             href={"https://tocata-y-fuga.netlify.app/"} 
-            collaborators={[{name: "Michelle Rodríguez", as: "Front-end Development", image: {img}}]}
-            list={["React", "CSS", "Github", "Figma", "Node", "Javascript", "Responsive Design", "Validation Form", "Investigation", "Clean Code"]} 
+            collaborators={[{name: "Michelle Rodríguez", as: "Front-end Development", img: {img}}]}
+            list={["React", "CSS", "Javascript", "Node", "npm", "Github", "Figma", "Responsive Design", "Collaborative Creation", "Clean Code", "Research"]}
           />
         </Route>
         <Route path="/project-2">
@@ -62,17 +57,18 @@ function App() {
             img={img3} 
             resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music humor Company: Tocata & Fuga"} 
             href={"https://tocata-y-fuga.netlify.app/"} 
-            collaborators={[{name: "Michelle Rodríguez", as: "Front-end Development", image: {img}}]} 
-            list={["React", "CSS", "Github", "Figma", "Node", "Javascript", "Responsive Design", "Validation Form", "Investigation", "Clean Code"]}/>
+            collaborators={[{name: "Michelle Rodríguez", as: "Front-end Development", img: {img}}]}
+            list={["Html", "CSS", "Github", "Responsive Design"]}
+          />
         </Route>
         <Route path="/project-4">
           <ProjectPage 
             title={"Portfolio"} 
             img={img3} 
-            resume={"bla bla bla"} 
+            resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music humor Company: Tocata & Fuga"} 
             href={"https://tocata-y-fuga.netlify.app/"} 
-            collaborators={[{name: "Michelle Rodríguez", as: "Front-end Development", image: {img}}, {name: "Luis Ramírez", as: "Designer", image: {img}}]} 
-            list={["React", "CSS", "Github", "Figma", "Node", "Javascript", "Responsive Design", "Validation Form", "Investigation", "Clean Code"]} 
+            collaborators={[{name: "Luis Ramírez", as: "Designer", img: {img}}, {name: "Michelle Rodríguez", as: "Front-end Development", img: {img}}]}
+            list={["React", "CSS", "Javascript", "Node", "npm", "Github", "Figma", "Responsive Design", "Collaborative Creation", "Clean Code", "Research"]}
           />
         </Route>
         <Route path="/"> 

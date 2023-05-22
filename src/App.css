@@ -92,9 +92,10 @@ p {
   height: .4rem;
   bottom: 0px;
 }
-/* .underlined:hover {
-  transition: width 2s cubic-bezier(0.4, 0, 0.2, 1); /* Customize the transition duration and cubic-bezier values */
-  /* width: 15%; */
-/*} */
-
+.inline {
+  display: inline-block;
+}
+.margin-right {
+  margin-right: 1.6rem;
+}
 
