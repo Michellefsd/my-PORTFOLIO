@@ -5,14 +5,13 @@ import Technologies from '../Technologies';
 import Link from '../Link';
 import { useRef } from 'react';
 
-function ProjectPage({ title, img, resume, href, collaborators, list }) {
+function ProjectPage({ title, img, resume, href, collaborators, imgyo, list }) {
     
   const cardRef = useRef(null);
   const handleClickToNavbar = () => {
     cardRef.current.scrollIntoView({behavior: 'smooth'});
   };
-  return (
-    // id={ProjectPage} 
+  return ( 
     <div ref={cardRef}>
       <div className='cloud cl1'></div>
       <div className='cloud cl2'></div>
@@ -28,7 +27,7 @@ function ProjectPage({ title, img, resume, href, collaborators, list }) {
         <div className='extras'>
           <div>
             <h3>Team</h3>
-            <Team collaborators={collaborators} />
+            <Team collaborators={collaborators} img={imgyo} />
           </div>
           <div>
             <h3>Technologies</h3>

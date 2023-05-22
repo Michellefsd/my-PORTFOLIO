@@ -3,6 +3,7 @@ import { useState } from 'react';
 import img1 from '../../img/1project.webp';
 import img2 from '../../img/rickmorty.webp';
 import img3 from '../../img/tocatayfuga.webp';
+import img4 from '../../img/portfolio.webp';
 import WhiteRectangle from '../WhiteRectangle';
 import ProjectDetail from '../ProjectDetail';
 
@@ -14,7 +15,6 @@ function Projects() {
   }
   const hideDetails = () => {
     setShowDetailProject(0)
-
   }
   return (
     <div className='section--projects'>
@@ -42,7 +42,13 @@ function Projects() {
             </div>
             <WhiteRectangle projectName={"Tocata & Fuga"} technologies={"HTML, CSS"} to="/project-3" />
           </div>
-          <div className='project__div'></div>
+          <div className='project__div'>
+            {(showDetailProject === 4) && <ProjectDetail principal={"Portfolio"} content={"React"} to="/project-4" />}    
+            <div onMouseOver={() => showDetail(4)} className='img-container'>
+              <img className="img-fill-container" src={img4} alt="My Portfolio" />
+            </div>
+            <WhiteRectangle projectName={"Portfolio"} technologies={"React"} to="/project-4" />
+          </div>
         </div>
       </section>
     </div>

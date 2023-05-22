@@ -9,7 +9,7 @@ function WhiteRectangle( { to, projectName, technologies } ) {
         <h4>{projectName}</h4>
         <p>{technologies}</p>
       </div>
-      <Link to={to}>See Project</Link>
+      <Link className="btn--big btn--white" to={to}>See Project</Link>
     </div>
   );
 };
