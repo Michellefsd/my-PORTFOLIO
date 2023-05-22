@@ -2,7 +2,7 @@ import './Button.css';
 import { useContext } from 'react';
 import NavigationContext from '../context/Navigation';
 
-function Link({ to, children, className}) {
+function Link({ to, children, className, onClick}) {
     const { navigate } = useContext(NavigationContext)
     const handleClick = (e) => {
         e.preventDefault();

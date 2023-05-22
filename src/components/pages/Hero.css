@@ -31,6 +31,7 @@
     width: 40rem;
     height: 9rem;
     background-color: var(--clouds_color);
+    opacity: .6;
     border-radius: 70%;
     animation: cloud 20s linear;
 }

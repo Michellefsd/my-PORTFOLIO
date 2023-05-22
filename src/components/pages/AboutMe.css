@@ -42,5 +42,6 @@
 @media (max-width: 480px) {
     #aboutMe {
         margin-bottom: 3.2rem;
+        display: flex;
     }
 }

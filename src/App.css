@@ -18,7 +18,6 @@ h3{
   line-height: 3.2rem;
   text-align: start;
 }
-
 p {
   font-size: 1.6rem;
 }
@@ -42,31 +41,29 @@ p {
   .div-skills {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-grow: 1;
+    gap: 1.6rem;
   }
 }
+
 .section {
   background-color: var(--white_color);
-  /* padding: 3rem;
-  margin-bottom: 3rem; */
   align-self: stretch;
   flex: none;
   order: 1;
   flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 @media (min-width: 480px) {
     .section {
     margin: 3rem;
     }
 }
-
 .section--title {
     position: relative;
     margin-bottom: 1.6rem;
 }
-
 .flex {
   display: flex;
 }
@@ -81,10 +78,6 @@ p {
 .hidden {
   visibility: hidden;
 }
-.stretch { 
-  position: relative;
-  align-self: stretch;
-}
 .underlined {
   position: absolute;
   background-color: var(--primary_color--100);
@@ -95,7 +88,6 @@ p {
 .inline {
   display: inline-block;
 }
-
 .bold {
   display: inline;
   font-weight: bold;

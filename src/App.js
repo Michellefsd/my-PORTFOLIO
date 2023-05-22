@@ -20,9 +20,6 @@ function App() {
   const aboutMeRef = useRef(null);
   const contactRef = useRef(null);
   
-  // esto es la idea de scrollup into projectpage
-  // const projectPageRef = useRef(null);
-  
   const handleClickToContact = () => {
     contactRef.current.scrollIntoView({behavior: 'smooth'});
   };
@@ -51,7 +48,8 @@ function App() {
             resume={"bla bla bla"} 
             href={"https://tocata-y-fuga.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", image: {img}}]} 
-            list={["React", "CSS", "Github", "Figma", "Node", "Javascript", "Responsive Design", "Validation Form", "Investigation", "Clean Code"]} />
+            list={["React", "CSS", "Github", "Figma", "Node", "Javascript", "Responsive Design", "Validation Form", "Investigation", "Clean Code"]}
+          />
         </Route>
         <Route path="/project-3">
           <ProjectPage 
@@ -80,15 +78,15 @@ function App() {
           </div> 
           <Hero handleClick={handleClickToProfile}/>
           <div className='div-skills'>
-            <div className='stretch' ref={aboutMeRef}>
+            <div ref={aboutMeRef}>
               <AboutMe  />
             </div>
-            <div className='stretch'>
+            <div>
               <Skills />
             </div>
           </div>
           <Projects />
-          <div ref={contactRef}>
+          <div  ref={contactRef}>
             <Contact />
           </div>
         </Route>

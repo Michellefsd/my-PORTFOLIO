@@ -10,7 +10,6 @@ function WhiteRectangle( { to, projectName, technologies } ) {
         <p>{technologies}</p>
       </div>
       <Link to={to}>See Project</Link>
-        {/* <button className='btn--white btn--small' href="https://simulador-carrito.netlify.app" target="_blank" >View</button> */}
     </div>
   );
 };

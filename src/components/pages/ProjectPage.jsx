@@ -3,15 +3,21 @@ import '../Button.css';
 import Team from '../Team';
 import Technologies from '../Technologies';
 import Link from '../Link';
+import { useRef } from 'react';
 
 function ProjectPage({ title, img, resume, href, collaborators, list }) {
+    
+  const cardRef = useRef(null);
+  const handleClickToNavbar = () => {
+    cardRef.current.scrollIntoView({behavior: 'smooth'});
+  };
   return (
     // id={ProjectPage} 
-    <div>
+    <div ref={cardRef}>
       <div className='cloud cl1'></div>
       <div className='cloud cl2'></div>
       <div className='cloud cl3'></div>
-      <div className="project-card">
+      <div onLoad={handleClickToNavbar}  id="card" className="project-card">
         <Link to="/" className="btn--back btn--small btn--orange">Back</Link>
         <h2 className='section--title'><span className='underlined'></span>{title}</h2>
         <div>

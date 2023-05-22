@@ -134,8 +134,6 @@ const Contact = forwardRef((props, ref) => {
       {showModal === 1 && <Modal className="success-modal" p1={"Your message has been received."} p2={" Thank you for your time!"} />}
       {showModal === 2 && <Modal className="alert-modal" p1={"Something went wrong"} p2={"Did you add all the information?"} />}
       {showModal === 3 && <Modal className="alert-modal" p1={"Ups! Something went wrong"} p2={"It's us. We are working to fix the problem"} />}
-      
-
     </div>
   )
 });
