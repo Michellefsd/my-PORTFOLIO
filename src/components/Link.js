@@ -2,14 +2,14 @@ import './Button.css';
 import { useContext } from 'react';
 import NavigationContext from '../context/Navigation';
 
-function Link({ to, children}) {
+function Link({ to, children, className}) {
     const { navigate } = useContext(NavigationContext)
     const handleClick = (e) => {
         e.preventDefault();
         navigate(to);
     }
   return (
-    <button onClick={handleClick} className='btn--big btn--white'>{children}</button>
+    <button className={className} onClick={handleClick}>{children}</button>
   );
 }
 

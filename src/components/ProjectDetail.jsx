@@ -1,4 +1,5 @@
 import './ProjectDetail.css';
+import './Button.css';
 import Link from './Link';
 
 
@@ -9,7 +10,7 @@ function ProjectDetail({ to, content, principal }) {
         <div className='content'>
             <h4>{principal}</h4>
             <p>{content}</p>
-            <Link to={to}>See Project</Link>
+            <Link  className='btn--big btn--white' to={to}>See Project</Link>
         </div>
     </div>
     
