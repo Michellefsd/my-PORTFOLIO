@@ -33,7 +33,7 @@ function App() {
       <main className='bk-main'>
         <Route path="/project-1">
           <ProjectPage 
-            title={"Recreation of an e-shop cart"} 
+            title={"E-Shop cart"} 
             img={img1} 
             resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music humor Company: Tocata & Fuga"} 
             href={"https://tocata-y-fuga.netlify.app/"} 
