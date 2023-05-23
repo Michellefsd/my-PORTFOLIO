@@ -45,3 +45,16 @@
         display: flex;
     }
 }
+.link-profile:hover {
+    color: var(--primary_color--60)
+}
+.link-profile {
+    color: var(--primary_color--80)
+}
+.margin {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: end;
+    margin-right: 8rem;
+    align-items: center;
+}
