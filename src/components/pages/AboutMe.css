@@ -54,7 +54,7 @@
 .margin {
     display: flex;
     gap: 1.6rem;
-    justify-content: end;
+    justify-content: flex-end;
     margin-right: 8rem;
     align-items: center;
 }

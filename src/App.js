@@ -6,7 +6,6 @@ import Footer from './components/pages/Footer';
 import Hero from './components/pages/Hero';
 import NavBar from './components/pages/NavBar';
 import Projects from './components/pages/Projects';
-import Link from './components/Link';
 import Route from './components/Route';
 import ProjectPage from './components/pages/ProjectPage';
 import Skills from './components/pages/Skills';
