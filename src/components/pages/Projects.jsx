@@ -36,11 +36,11 @@ function Projects() {
             <WhiteRectangle projectName={"Rick y Morty"} technologies={"React"} to="/project-2" />
           </div>
           <div className='project__div'>
-            {(showDetailProject === 3) && <ProjectDetail principal={"Tocata & Fuga"} content={"HTML, CSS"} to="/project-3" />}    
+            {(showDetailProject === 3) && <ProjectDetail principal={"Tocata & Fuga"} content={"HTML, SCSS"} to="/project-3" />}    
             <div onMouseOver={() => showDetail(3)} className='img-container'>
               <img className="img-fill-container" src={img3} alt="Tocata and Fuga: Music and Humor Company" />
             </div>
-            <WhiteRectangle projectName={"Tocata & Fuga"} technologies={"HTML, CSS"} to="/project-3" />
+            <WhiteRectangle projectName={"Tocata & Fuga"} technologies={"HTML, SCSS"} to="/project-3" />
           </div>
           <div className='project__div'>
             {(showDetailProject === 4) && <ProjectDetail principal={"Portfolio"} content={"React"} to="/project-4" />}    

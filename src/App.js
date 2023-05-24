@@ -6,6 +6,7 @@ import Footer from './components/pages/Footer';
 import Hero from './components/pages/Hero';
 import NavBar from './components/pages/NavBar';
 import Projects from './components/pages/Projects';
+import Link from './components/Link';
 import Route from './components/Route';
 import ProjectPage from './components/pages/ProjectPage';
 import Skills from './components/pages/Skills';
@@ -17,20 +18,22 @@ import img3 from './img/tocatayfuga.webp';
 import img2 from './img/rickmorty.webp';
 import img1 from './img/1project.webp';
 
-function App() { 
+function App() {
+
   const aboutMeRef = useRef(null);
   const contactRef = useRef(null);
   
   const handleClickToContact = () => {
-    contactRef.current.scrollIntoView({behavior: 'smooth'});
+    contactRef.current.scrollIntoView({behavior: 'smooth'}) 
   };
+ 
   const handleClickToProfile = () => {
     aboutMeRef.current.scrollIntoView({behavior: 'smooth'});
   };
 
   return (
     <div>
-      <NavBar handleClick={handleClickToContact}/>
+      <NavBar ref={contactRef} handleClick={handleClickToContact}/>
       <main className='bk-main'>
         <Route path="/project-1">
           <ProjectPage 
@@ -46,7 +49,8 @@ function App() {
         <Route path="/project-2">
           <ProjectPage 
             title={"Rick & Morty"} 
-            img={img2} 
+            img={img2}
+            imgyo={img} 
             resume={"bla bla bla"} 
             href={"https://rick-y-morty-characters.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: {img}}]} 
@@ -56,17 +60,19 @@ function App() {
         <Route path="/project-3">
           <ProjectPage 
             title={"Tocata & Fuga"} 
-            img={img3} 
+            img={img3}
+            imgyo={img} 
             resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music humor Company: Tocata & Fuga. This Project was builded only with html and Css, just to see the power of simplicity."} 
             href={"https://tocata-y-fuga.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: {img}}]}
-            list={["Html", "CSS", "Github", "Responsive Design"]}
+            list={["Html", "SCSS", "Gulp", "Github", "Responsive Design"]}
           />
         </Route>
         <Route path="/project-4">
           <ProjectPage 
             title={"Portfolio"} 
             img={img4} 
+            imgyo={img}
             resume={"This collaborative project was developed in partnership with Luis Ramirez, a talented UX/UI Designer. The project incorporates animations, form validation, and a project resume section. One of the highlights of this project was the opportunity to work in harmony with Luis Ramirez's design requirements. It allowed me to gain experience in working with Figma and challenged me to adhere to his design concepts. This collaboration served as valuable practice in collaborating with a designer and understanding the importance of maintaining a cohesive style."} 
             href={"https://tocata-y-fuga.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: {img}}, {name: "Luis Ramírez", as: "Designer", img: {img}}]}
@@ -88,7 +94,7 @@ function App() {
             </div>
           </div>
           <Projects />
-          <div  ref={contactRef}>
+          <div ref={contactRef}>
             <Contact />
           </div>
         </Route>

@@ -6,6 +6,7 @@ import Link from '../Link';
 import { useRef } from 'react';
 
 function ProjectPage({ title, img, resume, href, collaborators, imgyo, list }) {
+  
     
   const cardRef = useRef(null);
   const handleClickToNavbar = () => {
