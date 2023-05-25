@@ -38,7 +38,7 @@ const AboutMe = forwardRef((props, ref ) => {
               <Studies where={"Udemy"} when={"december 2021"} imagen={img1} what={"Front-End Development"}/>
             </div>
             <div>
-              <Studies where={"Udemy"} when={"may 2022"} imagen={img2} what={"Javascript ES6+"} />
+              <Studies where={"Udemy"} when={"may 2022"} imagen={img2} what={"JavaScript ES6+"} />
             </div>
             <div>
               <Studies where={"Udemy"} when={"january 2023"} imagen={img3} what={"Web Development"} />
