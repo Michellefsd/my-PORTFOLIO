@@ -33,10 +33,9 @@ function App() {
 
   return (
     <div>
-      <NavBar handleClick={handleClickToContact} />
-      <main className='bk-main'>
         <Route path="/project-1">
           <ProjectPage 
+            handleClickToContact={handleClickToContact}
             title={"E-Shop cart"} 
             img={img1} 
             imgyo={img}
@@ -77,26 +76,28 @@ function App() {
           />
         </Route>
         <Route path="/"> 
-          <AnimationSky />
-          <div className='avion'>
-              <Aeroplane />
-          </div> 
-          <Hero handleClick={handleClickToProfile}/>
-          <div className='div-skills'>
-            <div ref={aboutMeRef}>
-              <AboutMe  />
+          <NavBar handleClick={handleClickToContact} />
+          <main className='bk-main'>
+            <AnimationSky />
+            <div className='avion'>
+                <Aeroplane />
+            </div> 
+            <Hero handleClick={handleClickToProfile}/>
+            <div className='div-skills'>
+              <div ref={aboutMeRef}>
+                <AboutMe  />
+              </div>
+              <div>
+                <Skills />
+              </div>
             </div>
-            <div>
-              <Skills />
+            <Projects />
+            <div ref={contactRef}>
+              <Contact />
             </div>
-          </div>
-          <Projects />
-          <div ref={contactRef}>
-            <Contact />
-          </div>
-        </Route>
-        <Footer />
-      </main>
+            <Footer />
+          </main>
+      </Route>
     </div>
   );
 }
