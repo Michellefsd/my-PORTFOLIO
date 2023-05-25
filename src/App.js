@@ -39,7 +39,7 @@ function App() {
             title={"E-Shop cart"} 
             img={img1} 
             imgyo={img}
-            resume={"Simulating the functionality of an e-commerce shopping cart, this page renders courses dynamically. Users can organize the course information by word, teacher, or category. When a new category is added, it automatically appears in the category search input. Selected courses are added to the cart. This shows the chosen courses, quantity, and total amount. Users can remove courses individually, decrement quantities or reset cart. if user goes away, localstorage will keep your cart for a while. The project was built from scratch using almost pure JS, Vue was used to render the courses. The HTML and CSS templates were customized to improve the style and alignment of the Project."} 
+            resume={"Simulating the functionality of an e-commerce shopping cart, this page renders courses dynamically. Users can organize the course information by word, teacher, or category. When a new category is added, it automatically appears in the category search input. Selected courses are added to the cart. This shows the chosen courses, quantity, and total amount. Users can remove courses individually, decrement quantities or reset cart. If user goes away, localstorage will keep your cart for a while. The project was built from scratch using almost pure JS, Vue was used to render the courses. The HTML and CSS templates were customized to improve the style and alignment of the project."} 
             href={"https://simulador-carrito.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Full-Stack Dev.",  img: img}]}
             list={["CSS", "JavaScript", "Vue", "npm", "Github", "Clean Code", "Responsive Design", "Classes"]}
@@ -59,7 +59,7 @@ function App() {
           <ProjectPage 
             title={"Tocata & Fuga"} 
             img={img3}
-            resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music humor Company: Tocata & Fuga. This Project was builded only with html and Css, just to see the power of simplicity."} 
+            resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music Company: Tocata & Fuga. This project was builded only with html and Css, just to see the power of simplicity."} 
             href={"https://tocata-y-fuga.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: img}]}
             list={["Html", "SCSS", "Gulp", "Github", "Responsive Design"]}

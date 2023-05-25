@@ -48,7 +48,7 @@ function ProjectPage({ title, img, resume, href, collaborators, list, handleClic
         <Footer />
       </main>
     </div> 
-  ) 
+  ); 
 }
 
-export default ProjectPage
+export default ProjectPage;
