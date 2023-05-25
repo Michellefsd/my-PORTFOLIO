@@ -1,8 +1,7 @@
 import './Team.css';
-function Team({ collaborators, img }) {
-    // FIX THE IMG PROBLEM SOON
+function Team({ collaborators }) {
     const devs = collaborators.map(collaborator => {
-        const { name, as } = collaborator;
+        const { name, as, img } = collaborator;
         return (
             <div className="inline" key={name}>
                 <div className="collaborator-img">
