@@ -60,9 +60,9 @@ const Contact = forwardRef((props, ref) => {
     setNameState(nameValue.trim() !== "");
   }
   const validateEmail = () => {
-    setEmailState(validator.validate(emailValue));
+    setEmailState(validator.validate(emailValue.trim()));
   }
-  const validatePhone = ( )=> {
+  const validatePhone = () => {
     // the regex is for local numbers the isValidPhoneNumber() fn is for international numbers
     const uruguayPhoneRegex = /^(09|2)\d{7}$|^0\d{7}$/;
     setPhoneState(uruguayPhoneRegex.test(phoneValue) || isValidPhoneNumber(phoneValue));
@@ -72,10 +72,10 @@ const Contact = forwardRef((props, ref) => {
     validateEmail();
     validatePhone();
   }
-
+ 
   function handleSubmit(e) {
     e.preventDefault();
-    if (validateEmail && validateName && validatePhone && messageValue !== "") {
+    if (validateEmail && validateName && validatePhone &&  messageValue !== "") {
       setEmailState(null);
       setPhoneState(null);
       setNameState(null);

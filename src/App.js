@@ -42,7 +42,7 @@ function App() {
             resume={"Simulating the functionality of an e-commerce shopping cart, this page renders courses dynamically. Users can organize the course information by word, teacher, or category. When a new category is added, it automatically appears in the category search input. Selected courses are added to the cart. This shows the chosen courses, quantity, and total amount. Users can remove courses individually, decrement quantities or reset cart. If user goes away, localstorage will keep your cart for a while. The project was built from scratch using almost pure JS, Vue was used to render the courses. The HTML and CSS templates were customized to improve the style and alignment of the project."} 
             href={"https://simulador-carrito.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Full-Stack Dev.",  img: img}]}
-            list={["CSS", "JavaScript", "Vue", "npm", "Github", "Clean Code", "Responsive Design", "Classes"]}
+            list={["CSS", "JavaScript", "Vue", "npm", "Github", "Clean Code", "Responsive Design", "Node", "Classes"]}
           />
         </Route>
         <Route path="/project-2">
@@ -52,14 +52,14 @@ function App() {
             resume={"This is my very first project in React. Here I practice an API request, and get some basis of the library"} 
             href={"https://rick-y-morty-characters.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: img}]} 
-            list={["React", "CSS", "Github", "Figma", "Node", "JavaScript", "Responsive Design", "Validation Form", "Investigation", "Clean Code"]}
+            list={["React", "Responsive Design", "API", "Clean Code"]}
           />
         </Route>
         <Route path="/project-3">
           <ProjectPage 
             title={"Tocata & Fuga"} 
             img={img3}
-            resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music Company: Tocata & Fuga. This project was builded only with html and Css, just to see the power of simplicity."} 
+            resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music Company: Tocata & Fuga. This project was builded only with html and Css, just to see the power of simplicity. As this year i am updating the project i will consider that this is the beggining of an adaptive approach."} 
             href={"https://tocata-y-fuga.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: img}]}
             list={["Html", "SCSS", "Gulp", "Github", "Responsive Design"]}
