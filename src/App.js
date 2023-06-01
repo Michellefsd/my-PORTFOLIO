@@ -49,7 +49,7 @@ function App() {
           <ProjectPage 
             title={"Rick & Morty"} 
             img={img2} 
-            resume={"This is my very first project in React. Here I practice an API request, and get some basis of the library"} 
+            resume={"This is my very first project in React. Here I practice invoking an API request, this is my first approach to React"} 
             href={"https://rick-y-morty-characters.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: img}]} 
             list={["React", "Responsive Design", "API", "Clean Code"]}
@@ -59,7 +59,7 @@ function App() {
           <ProjectPage 
             title={"Tocata & Fuga"} 
             img={img3}
-            resume={"Simple real project with the intention of spread, promulgate, dates of shows of the Humor and Music Company: Tocata & Fuga. This project was builded only with html and Css, just to see the power of simplicity. As this year i am updating the project i will consider that this is the beggining of an adaptive approach."} 
+            resume={"Simple real project with the intention to spread, promote, dates of shows of the Humor and Music Company: Tocata & Fuga. This project was built only with html and Css, just to see the power of simplicity. This is the first of an ongoing Project."} 
             href={"https://tocata-y-fuga.netlify.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: img}]}
             list={["Html", "SCSS", "Gulp", "Github", "Responsive Design"]}
