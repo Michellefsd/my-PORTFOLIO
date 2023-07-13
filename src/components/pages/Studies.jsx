@@ -1,7 +1,7 @@
 import './Studies.css';
 import React from 'react'
 
-function Studies({where, when, what, imagen}) {
+function Studies({where, when, what, imagen, badge}) {
   return (
     <div className='studies__card'>
         <div className='img__div--studiestudie'>
@@ -12,6 +12,11 @@ function Studies({where, when, what, imagen}) {
             <h4 className='what'>{what}</h4>
             <p className='when'>{when}</p>
         </div>
+        {badge && (
+        <div>
+          <img src={badge} alt="badge of aws"/>
+        </div>
+        )}
     </div>
   )
 }

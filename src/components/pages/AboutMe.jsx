@@ -2,6 +2,7 @@ import './AboutMe.css';
 import img1 from'../../img/aws.jpg';
 import img2 from'../../img/ibma.jpg';
 import img3 from'../../img/studies3.jpg';
+import badge from '../../img/aws-learning-cloud-essentials(1).png'
 import { forwardRef } from 'react';
 import image from'../../img/cv.jpg';
 import Studies from './Studies';
@@ -10,6 +11,7 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { IoMdMail } from 'react-icons/io';
 
 const AboutMe = forwardRef((props, ref ) => {
+
   return (
     <div>
       <section id="aboutMe" ref={ref} className='section'>
@@ -35,7 +37,7 @@ const AboutMe = forwardRef((props, ref ) => {
           <h3>Studies</h3>
           <div className='div-card'>
             <div>
-              <Studies where={"AWS"} when={"July 2023"} imagen={img1} what={"AWS Cloud-Practitioner"}/>
+              <Studies where={"AWS"} when={"July 2023"} imagen={img1} what={"AWS Cloud-Practitioner"} badge={badge}/>
             </div>
             <div>
               <Studies where={"IBM"} when={"June 2023"} imagen={img2} what={"Python for Data Science"} />
