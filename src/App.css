@@ -99,3 +99,10 @@ p {
   margin: 1.6rem;
   margin-left: 0;
 }
+.center {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: space-around;
+  margin-right: 8rem;
+  align-items: center;
+}

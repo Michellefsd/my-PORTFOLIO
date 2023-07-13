@@ -1,4 +1,4 @@
-import './SkillsDetail.css';
+import './ProjectDetail.css';
 
 function SkillsDetail({ list }) {
 
