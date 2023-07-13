@@ -40,7 +40,7 @@ function Skills() {
               </MiniCard>
               <MiniCard icon={<DiGithubBadge />}>
               {/* {(showDetailsSkills === 4) && <SkillsDetail list={["GitHub"]} />} */}
-                Git
+                GitHub
               </MiniCard>
               <MiniCard icon={<BsFillDatabaseFill />}>
               {/* {(showDetailsSkills === 5) && <SkillsDetail list={["MySQL"]} />} */}
