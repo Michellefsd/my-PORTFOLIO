@@ -13,7 +13,7 @@ function Studies({where, when, what, imagen, badge}) {
             <p className='when'>{when}</p>
         </div>
         {badge && (
-        <div>
+        <div className='margin'>
           <img src={badge} alt="badge of aws"/>
         </div>
         )}
