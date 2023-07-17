@@ -60,7 +60,7 @@ function App() {
             title={"Tocata & Fuga"} 
             img={img3}
             resume={"Simple real project with the intention to spread, promote, dates of shows of the Humor and Music Company: Tocata & Fuga. This project was built only with html and Css, just to see the power of simplicity. This is the first of an ongoing Project."} 
-            href={"https://tocata-y-fuga.netlify.app/"} 
+            href={"https://tocata-y-fuga.vercel.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: img}]}
             list={["Html", "SCSS", "Gulp", "Github", "Responsive Design"]}
           />
