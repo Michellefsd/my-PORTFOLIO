@@ -70,7 +70,7 @@ function App() {
             title={"Portfolio"} 
             img={img4} 
             resume={"This collaborative project was developed in partnership with Luis Ramirez, a talented UX/UI Designer. The project incorporates animations, form validation, and a project resume section. One of the highlights of this project was the possibility to work with Luis Ramirez's design requirements. It allowed me to gain experience in working with Figma and challenged me to adhere to his design concepts. This collaboration served as valuable practice in collaborating with a designer and understanding the importance of maintaining a cohesive style."} 
-            href={"https://tocata-y-fuga.netlify.app/"} 
+            href={"https://tocata-y-fuga.vercel.app/"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: img}, {name: "Luis Ramírez", as: "Designer", img: img5}]}
             list={["React", "CSS", "JavaScript", "Node", "npm", "Github", "Figma", "Responsive Design", "Collaborative Creation", "Clean Code", "Research"]}
           />
