@@ -1,16 +1,20 @@
 import './App.css';
+// Import useRef para poder acceder a partes dentro de mi singlepage
 import { useRef } from 'react';
+import Route from './components/Route';
+// Importo componentes
 import AboutMe from './components/pages/AboutMe';
 import Contact from './components/pages/Contact';
 import Footer from './components/pages/Footer';
 import Hero from './components/pages/Hero';
 import NavBar from './components/pages/NavBar';
 import Projects from './components/pages/Projects';
-import Route from './components/Route';
 import ProjectPage from './components/pages/ProjectPage';
 import Skills from './components/pages/Skills';
+// Importo animaciones
 import AnimationSky from './components/AnimationSky';
 import Aeroplane from './components/Aeroplane';
+// importo imagenes
 import img from './img/cv.jpg';
 import img5 from './img/luis.png';
 import img4 from './img/portfolio.webp';
@@ -18,21 +22,24 @@ import img3 from './img/tocatayfuga.webp';
 import img2 from './img/rickmorty.webp';
 import img1 from './img/1project.webp';
 
-function App() {
 
+function App() {
+  // uso REF para acceder aciertas partes de mi single page
   const aboutMeRef = useRef(null);
   const contactRef = useRef(null);
-  
+  // Llevo al contacto
   const handleClickToContact = () => {
     contactRef.current.scrollIntoView({behavior: 'smooth'}) 
   };
- 
+  //  Llevo al profile
   const handleClickToProfile = () => {
     aboutMeRef.current.scrollIntoView({behavior: 'smooth'});
   };
 
   return (
     <div>
+      {/* Opciones de enrutamiento:
+      Primero los 4 proyectos */}
         <Route path="/project-1">
           <ProjectPage 
             handleClickToContact={handleClickToContact}
@@ -75,6 +82,7 @@ function App() {
             list={["React", "CSS", "JavaScript", "Node", "npm", "Github", "Figma", "Responsive Design", "Collaborative Creation", "Clean Code", "Research"]}
           />
         </Route>
+        {/* Opcion de enrutamiento, por default, pagina principal */}
         <Route path="/"> 
           <NavBar handleClick={handleClickToContact} />
           <main className='bk-main'>

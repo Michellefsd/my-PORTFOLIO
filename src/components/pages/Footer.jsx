@@ -39,7 +39,7 @@ function Footer({ starsId }) {
         <p>Michelle Rodríguez <span>&copy;</span> {year}. All Rights Reserved</p>  
         <div className='footer-mention'>
           <p>Designed by <span className='link-luis'> Luis Ramírez</span></p>
-        </div>
+        </div> 
       </footer>
      
   </div>

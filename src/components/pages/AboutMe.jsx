@@ -29,7 +29,7 @@ const AboutMe = forwardRef((props, ref ) => {
         <div className='margin'>
           <IconContext.Provider value={{ size:"42px" }}>  
             <a className='link-profile' href="https://github.com/Michellefsd" target="blank" rel="noopener noreferrer"><AiFillGithub /></a>
-            <a className='link-profile' href="https://www.linkedin.com/in/michelle-rodr%C3%ADguez-326972239/" target="blank" rel="noopener noreferrer"><AiFillLinkedin /></a>
+            <a className='link-profile' href="https://www.linkedin.com/in/michelle-rodriguez-326972239/" target="blank" rel="noopener noreferrer"><AiFillLinkedin /></a>
             <a className='link-profile' href="mailto:promichfsd@gmail.com?subject=Hey Michelle, I visited your WebSite&body=hello" title="Mail" rel="noopener noreferrer" target="blank"><IoMdMail /></a>
           </IconContext.Provider>  
         </div>

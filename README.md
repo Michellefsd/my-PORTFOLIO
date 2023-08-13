@@ -1,17 +1,6 @@
 # my portfolio
 
-
-
-
-
-
-
-
-
-
-
-
-
+Este Proyecto lo hice con mucho amor..
 
 # Getting Started with Create React App
 
