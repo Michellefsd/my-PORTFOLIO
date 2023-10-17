@@ -4,6 +4,7 @@ import img1 from '../../img/1project.webp';
 import img2 from '../../img/rickmorty.webp';
 import img3 from '../../img/tocatayfuga.webp';
 import img4 from '../../img/portfolio.webp';
+import img5 from '../../img/parking.webp';
 import WhiteRectangle from '../WhiteRectangle';
 import ProjectDetail from '../ProjectDetail';
 
@@ -48,6 +49,13 @@ function Projects() {
               <img className="img-fill-container" src={img4} alt="My Portfolio" />
             </div>
             <WhiteRectangle projectName={"Portfolio"} technologies={"React"} to="/project-4" />
+          </div>
+          <div className='project__div'>
+            {(showDetailProject === 5) && <ProjectDetail principal={"Parking"} content={"PHP, MySQL"} to="/project-5" />}    
+            <div onMouseOver={() => showDetail(5)} className='img-container'>
+              <img className="img-fill-container" src={img5} alt="Parking app" />
+            </div>
+            <WhiteRectangle projectName={"Parking app"} technologies={"PHP, MySQL"} to="/project-5" />
           </div>
         </div>
       </section>

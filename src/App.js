@@ -15,8 +15,9 @@ import Skills from './components/pages/Skills';
 import AnimationSky from './components/AnimationSky';
 import Aeroplane from './components/Aeroplane';
 // importo imagenes
+import video1 from './img/video/parking.mp4';
 import img from './img/cv.jpg';
-import img5 from './img/luis.png';
+import img6 from './img/luis.png';
 import img4 from './img/portfolio.webp';
 import img3 from './img/tocatayfuga.webp';
 import img2 from './img/rickmorty.webp';
@@ -78,8 +79,18 @@ function App() {
             img={img4} 
             resume={"This collaborative project was developed in partnership with Luis Ramirez, a talented UX/UI Designer. The project incorporates animations, form validation, and a project resume section. One of the highlights of this project was the possibility to work with Luis Ramirez's design requirements. It allowed me to gain experience in working with Figma and challenged me to adhere to his design concepts. This collaboration served as valuable practice in collaborating with a designer and understanding the importance of maintaining a cohesive style."} 
             href={"https://tocata-y-fuga.vercel.app/"} 
-            collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: img}, {name: "Luis Ramírez", as: "Designer", img: img5}]}
+            collaborators={[{name: "Michelle Rodríguez", as: "Front-end Dev.", img: img}, {name: "Luis Ramírez", as: "Designer", img: img6}]}
             list={["React", "CSS", "JavaScript", "Node", "npm", "Github", "Figma", "Responsive Design", "Collaborative Creation", "Clean Code", "Research"]}
+          />
+        </Route>
+        <Route path="/project-5">
+          <ProjectPage 
+            title={"Parking App"} 
+            video={video1} 
+            resume={`This project was developed in ten days. \n In This Case you will have acces to a zip file with instructions to run the app on your PC using Xampp. \n Is a Parking App, that pretends to fullfill the basic necessities of every parking, You can check in, check out, and log in for the first time a vehicle, it also prevents, some possible mistakes. We have a database, pretending to be 5 floors of 10 vacancys each, with no necessitie to choose the specific place on Parking. `} 
+            href={"https://drive.google.com/drive/folders/1W7B1B7q19_jfvOYHhlGkP2Zfd1iyUTsD?usp=drive_link"} 
+            collaborators={[{name: "Michelle Rodríguez", as: "Full Stack Dev.", img: img}]}
+            list={["PHP", "CSS", "JavaScript", "MySQL", "HTML", "Github", "Responsive Design", "Agile Methodologies", "Clean Code"]}
           />
         </Route>
         {/* Opcion de enrutamiento, por default, pagina principal */}

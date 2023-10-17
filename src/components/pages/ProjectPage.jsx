@@ -7,7 +7,7 @@ import Footer from './Footer';
 import NavBar from './NavBar';
 import { useRef } from 'react';
 
-function ProjectPage({ title, img, resume, href, collaborators, list, handleClickToContact }) {
+function ProjectPage({ title, video, img, resume, href, collaborators, list, handleClickToContact }) {
     
   const cardRef = useRef(null);
   const handleClickToNavbar = () => {
@@ -30,8 +30,9 @@ function ProjectPage({ title, img, resume, href, collaborators, list, handleClic
           <Link to="/" className="btn--back btn--small btn--orange">Back</Link>
           <h2 className='section--title'><span className='underlined'></span>{title}</h2>
           <div>
-            <img src={img} alt={title} />
+            {video? <video src={video} alt={title} width="608" autoplay loop muted></video> : <img src={img} alt={title} /> }
           </div>
+
           <p className='resume'>{resume}</p>
           <a target="blank" href={href} className="btn--big btn--white">Visit The Site</a>
           <div className='extras'>
