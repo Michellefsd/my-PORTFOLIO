@@ -30,7 +30,7 @@ function ProjectPage({ title, video, img, resume, href, collaborators, list, han
           <Link to="/" className="btn--back btn--small btn--orange">Back</Link>
           <h2 className='section--title'><span className='underlined'></span>{title}</h2>
           <div>
-            {video? <video src={video} alt={title} width="608" controls autoplay loop muted></video> : <img src={img} alt={title} /> }
+            {video? <video src={video} alt={title}  controls autoplay loop muted></video> : <img src={img} alt={title} /> }
           </div>
 
           <p className='resume'>{resume}</p>

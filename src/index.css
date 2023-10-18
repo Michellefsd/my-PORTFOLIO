@@ -51,6 +51,7 @@ a {
     text-decoration: none;
 }
 
+video,
 img,
 picture {
     max-width: 100%;
