@@ -20,8 +20,8 @@ const AboutMe = forwardRef((props, ref ) => {
           <div className='img__div'>
             <img className='img' src={image} alt="My Face"></img>
           </div>
-          <p>I am a Front End Developer living in Montevideo, Uruguay.
-            I love Learning and I desire to become a Full Stack Developer.
+          <p>I am a Full Stack Developer, with orientation to Frontend, living in Montevideo, Uruguay.
+            I love Learning, Teamwork and solve problems in time.
             Besides Programming I'm interested on Maths, Arts, Music,
             Architecture and Aeronautics. 
           </p>
