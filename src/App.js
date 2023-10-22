@@ -87,7 +87,7 @@ function App() {
           <ProjectPage 
             title={"Parking App"} 
             video={video1} 
-            resume={`This project was developed in ten days. \n In This Case you will have acces to a zip file with instructions to run the app on your PC using Xampp. \n Is a Parking App, that pretends to fullfill the basic necessities of every parking, You can check in, check out, and log in for the first time a vehicle, it also prevents, some possible mistakes. We have a database, pretending to be 5 floors of 10 vacancys each, with no necessitie to choose the specific place on Parking. `} 
+            resume={"This project was developed in ten days. In This Case you will have acces to a zip file with instructions to run the app on your PC using Xampp. Is a Parking App, that pretends to fullfill the basic necessities of every parking, You can check in, check out, and log in for the first time a vehicle, it also prevents, some possible mistakes. We have a database, pretending to be 5 floors of 10 vacancys each, with no necessitie to choose the specific place on Parking. "} 
             href={"https://drive.google.com/drive/folders/1W7B1B7q19_jfvOYHhlGkP2Zfd1iyUTsD?usp=drive_link"} 
             collaborators={[{name: "Michelle Rodríguez", as: "Full Stack Dev.", img: img}]}
             list={["PHP", "CSS", "JavaScript", "MySQL", "HTML", "Github", "Responsive Design", "Agile Methodologies", "Clean Code"]}
