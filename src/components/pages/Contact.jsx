@@ -9,6 +9,10 @@ import Alert from '../Alert';
 import Modal from '../Modal';
 
 const Contact = forwardRef((props, ref) => {
+ 
+  emailjs.init('tqT8WHPJEx0CJOgWW');
+  const serviceID = 'default_service';
+  const templateID = 'template_oz36m38';
 
   const form = useRef();
 
@@ -84,7 +88,7 @@ const Contact = forwardRef((props, ref) => {
       setPhoneValue("");
       setMessageValue("");
       setCounter(250);
-      emailjs.sendForm('service_7833pqs', 'template_8bgob4n', form.current, 'BRtHHSHjafSHySB1p')
+      emailjs.sendForm(serviceID, templateID, form.current)
       .then((result) => {
         console.log(result)
         setTimeout(() => {
