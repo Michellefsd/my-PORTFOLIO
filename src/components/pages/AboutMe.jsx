@@ -4,7 +4,7 @@ import img2 from'../../img/ibma.jpg';
 import img3 from'../../img/studies3.jpg';
 import badge from '../../img/aws-learning-cloud-essentials(1).png'
 import { forwardRef } from 'react';
-import image from'../../img/cv.jpg';
+import image from'../../img/cv.png';
 import Studies from './Studies';
 import { IconContext } from 'react-icons';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';

@@ -16,7 +16,7 @@ import AnimationSky from './components/AnimationSky';
 import Aeroplane from './components/Aeroplane';
 // importo imagenes
 import video1 from './img/video/parking.mp4';
-import img from './img/cv.jpg';
+import img from './img/cv.png';
 import img6 from './img/luis.png';
 import img4 from './img/portfolio.webp';
 import img3 from './img/tocatayfuga.webp';
