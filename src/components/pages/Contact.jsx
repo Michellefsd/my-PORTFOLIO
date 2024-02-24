@@ -10,7 +10,7 @@ import Modal from '../Modal';
 
 const Contact = forwardRef((props, ref) => {
  
-  emailjs.init('tqT8WHPJEx0CJOgWW');
+  emailjs.init('i95aPTEBF0sgdmh4a');
   const serviceID = 'default_service';
   const templateID = 'template_oz36m38';
 
